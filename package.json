@@ -22,7 +22,7 @@
   "author": "Milo Clement",
   "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3001 && react-scripts start",
     "build": "react-scripts build"
   },
   "browserslist": {
