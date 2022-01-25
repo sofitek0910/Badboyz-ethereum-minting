@@ -100,7 +100,7 @@ from {
 
 .roadmap-image {
     position: absolute;
-    z-index: -1;
+    z-index: -5;
 }
 
 .roadmap-front-image {
@@ -113,5 +113,43 @@ from {
     z-index: -1;
     left: 44.8%;
     top: 15px;
+}
+
+.fixed {
+    position: fixed;
+    top: 40%;
+    /* left: 44.8%; */
+}
+
+.wham {
+    position: absolute;
+    left: 43%;
+    top: 28%;
+    width: 14%;
+    z-index: -10;
+}
+
+.bang {
+    position: absolute;
+    left: 43%;
+    top: 46%;
+    width: 14%;
+    z-index: -10;
+}
+
+.pow {
+    position: absolute;
+    left: 43%;
+    top: 66%;
+    width: 14%;
+    z-index: -10;
+}
+
+.kaboom {
+    position: absolute;
+    left: 42%;
+    top: 85%;
+    width: 14%;
+    z-index: -10;
 }
   

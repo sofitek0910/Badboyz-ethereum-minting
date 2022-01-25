@@ -111,14 +111,45 @@ function Home() {
   })
 
   const flyObj = useRef();
+  const whamObj = useRef();
+  const bangObj = useRef();
+  const powObj = useRef();
+  const kaboomObj = useRef();
 
   const handleScroll = () => {
     var flyObjDimension = flyObj.current.getBoundingClientRect();
-    if(flyObjDimension.top >= 0 && flyObjDimension.bottom <= window.innerHeight) {
-		console.log('Element is fully visible in screen');
-	}
-    console.log("handle==>", flyObjDimension.top, flyObjDimension.bottom, window.innerHeight)
+    var whamObjDimension = whamObj.current.getBoundingClientRect();
+    var bangObjDimension = bangObj.current.getBoundingClientRect();
+    var powObjDimension = powObj.current.getBoundingClientRect();
+    var kaboomObjDimension = kaboomObj.current.getBoundingClientRect();
 
+    if ( flyObjDimension.top+flyObj.current.height/2 <= window.innerHeight/2 ) {
+        console.log("center position")
+    }
+    console.log("wham center position", whamObjDimension.top+whamObj.current.height/2, window.innerHeight/2+50)
+    if ( whamObjDimension.top+whamObj.current.height/2 <= flyObjDimension.top+flyObj.current.height/2 ) {
+        whamObj.current.style.setProperty("z-index", "-2")
+    } else {
+        whamObj.current.style.setProperty("z-index", "-10")
+    }
+
+    if ( bangObjDimension.top+bangObj.current.height/2 <= flyObjDimension.top+flyObj.current.height/2 ) {
+        bangObj.current.style.setProperty("z-index", "-2")
+    } else {
+        bangObj.current.style.setProperty("z-index", "-10")
+    }
+
+    if ( powObjDimension.top+powObj.current.height/2 <= flyObjDimension.top+flyObj.current.height/2 ) {
+        powObj.current.style.setProperty("z-index", "-2")
+    } else {
+        powObj.current.style.setProperty("z-index", "-10")
+    }
+
+    if ( kaboomObjDimension.top+kaboomObj.current.height/2 <= flyObjDimension.top+flyObj.current.height/2 ) {
+        kaboomObj.current.style.setProperty("z-index", "-2")
+    } else {
+        kaboomObj.current.style.setProperty("z-index", "-10")
+    }
   }
 
   useEffect(() => {
@@ -142,7 +173,11 @@ function Home() {
             <img className="width-100 roadmap-image" src="./assets/images/roadmap.jpg"/>
             <img className="width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
             <div className="text-center">
-                <img className="fly" ref={flyObj} src="./assets/images/fly.png"/>
+                <img className="fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
+                <img className="wham" ref={whamObj} src="./assets/images/wham.png"/>
+                <img className="bang" ref={bangObj}src="./assets/images/bang.png"/>
+                <img className="pow" ref={powObj} src="./assets/images/pow.png"/>
+                <img className="kaboom" ref={kaboomObj} src="./assets/images/kaboom.png"/>
             </div>
         </div>
         <div className="origin-story">
