@@ -26,10 +26,92 @@
 }
 
 /*  my new css */
-body {
-
-}
-
 .width-100 {
     width: 100%;
 }
+
+.origin-story {
+    background: url(../images/origin_story_back.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.origing-image {
+    cursor: pointer;
+
+}
+
+.origin-story-title {
+    width: 32%;
+    animation-duration: 2s;
+    animation-name: flash;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+from {
+        transform: scale(0.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+  
+.slider {
+    width: 750px;
+    margin: 0 auto;
+}
+
+.slick-arrow {
+    display: none!important;
+}
+
+.wrapper {
+    padding-bottom: 40px;
+}
+
+.slick-track {
+    padding-top: 53px;
+    padding-bottom: 53px;
+}
+
+.slick-slide {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slick-slide:not(.slick-current) {
+    filter: brightness(1);
+}
+
+.slick-slide.slick-current {
+    transform: scale(1.35);
+    position: relative;
+    z-index: 1;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.road-map {
+    position: relative;
+}
+
+.roadmap-image {
+    position: absolute;
+    z-index: -1;
+}
+
+.roadmap-front-image {
+    /* position: relative; */
+}
+
+.fly {
+    width: 10%;
+    position: absolute;
+    z-index: -1;
+    left: 44.8%;
+    top: 15px;
+}
+  
