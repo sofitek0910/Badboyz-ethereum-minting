@@ -48,7 +48,7 @@
 }
 
 @keyframes flash {
-from {
+    from {
         transform: scale(0.1);
     }
 
@@ -56,8 +56,34 @@ from {
         transform: scale(1);
     }
 }
+
+.comic-images-section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0 100px 0;
+}
+
+.comic-item-image {
+    width: 70%;
+}
+
+.bat-boy {
+    transform: scale(1.2);
+    margin-left: 15%;
+}
+
+.spider-boy {
+    margin-left: 60%;
+}
+
+.coming-soon {
+    margin-left: -30%;
+}
   
-.slider {
+/* .slider {
     width: 750px;
     margin: 0 auto;
 }
@@ -92,7 +118,7 @@ from {
 
 .slick-slide img {
     width: 100%;
-}
+} */
 
 .road-map {
     position: relative;
@@ -101,10 +127,6 @@ from {
 .roadmap-image {
     position: absolute;
     z-index: -5;
-}
-
-.roadmap-front-image {
-    /* position: relative; */
 }
 
 .fly {
@@ -147,9 +169,21 @@ from {
 
 .kaboom {
     position: absolute;
-    left: 42%;
-    top: 85%;
+    left: 42.5%;
+    top: 84%;
     width: 14%;
     z-index: -10;
+}
+
+@media screen and (max-width: 900px){
+    .comic-images-section {
+        padding: 40px 0 60px 0;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .comic-images-section {
+        padding: 20px 0 40px 0;
+    }
 }
   

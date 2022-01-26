@@ -185,26 +185,22 @@ function Home() {
             <div className="origin-title text-center">
                 <img className="origin-story-title" src="./assets/images/origin_story_title.png"/>
             </div>
-            <div className="wrapper">
-                <div className="content">
-                    <div className="slider">
-                        <div className="slider__item">
-                            <a>
-                                <img className="origing-image" src="./assets/images/SpiderBoy.png" />
-                            </a>
-                        </div>
-                        <div className="slider__item">
-                            <a href="javascript:;">
-                                <img className="origing-image" src="./assets/images/BatBoy.png" /> 
-                            </a>
-                            
-                        </div>
-                        <div className="slider__item">
-                            <a href="javascript:;">
-                                <img className="origing-image" src="./assets/images/SpiderBoy.png" />
-                            </a>
-                        </div>
-                    </div>
+            <div className="comic-images-section">
+                <div className="comic-item">
+                    <a>
+                        <img className="spider-boy comic-item-image" src="./assets/images/SpiderBoy.png" />
+                    </a>
+                </div>
+                <div className="comic-item">
+                    <a href="javascript:;">
+                        <img className="bat-boy comic-item-image" src="./assets/images/BatBoy.png" /> 
+                    </a>
+                    
+                </div>
+                <div className="comic-item">
+                    <a href="javascript:;">
+                        <img className="coming-soon comic-item-image" src="./assets/images/SpiderBoy.png" />
+                    </a>
                 </div>
             </div>
             {/* <div className="gallery">
