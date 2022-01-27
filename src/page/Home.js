@@ -115,6 +115,7 @@ function Home() {
   const bangObj = useRef();
   const powObj = useRef();
   const kaboomObj = useRef();
+  const originObj = useRef();
 
   const handleScroll = () => {
     var flyObjDimension = flyObj.current.getBoundingClientRect();
@@ -122,6 +123,7 @@ function Home() {
     var bangObjDimension = bangObj.current.getBoundingClientRect();
     var powObjDimension = powObj.current.getBoundingClientRect();
     var kaboomObjDimension = kaboomObj.current.getBoundingClientRect();
+    var originObjDimension = originObj.current.getBoundingClientRect();
 
     if ( flyObjDimension.top+flyObj.current.height/2 <= window.innerHeight/2 ) {
         console.log("center position")
@@ -150,6 +152,13 @@ function Home() {
     } else {
         kaboomObj.current.style.setProperty("z-index", "-10")
     }
+
+    if ( originObjDimension.top <= window.innerHeight && originObjDimension.bottom >= 100 ) {
+        originObj.current.style.setProperty("animation-name", "flash");
+        originObj.current.style.setProperty("animation-duration", "1.5s");
+        originObj.current.style.setProperty("animation-iteration-count", "1");
+        originObj.current.style.setProperty("animation-fill-mode", "forwards");
+    } 
   }
 
   useEffect(() => {
@@ -181,9 +190,8 @@ function Home() {
             </div>
         </div>
         <div className="origin-story">
-            {/* <img className="width-100 origin-story-back" src="./assets/images/origin_story_back.jpg"/> */}
             <div className="origin-title text-center">
-                <img className="origin-story-title" src="./assets/images/origin_story_title.png"/>
+                <img className="origin-story-title" ref={originObj} src="./assets/images/origin_story_title.png"/>
             </div>
             <div className="comic-images-section">
                 <div className="comic-item">
@@ -204,15 +212,15 @@ function Home() {
                 </div>
             </div>
             {/* <div className="gallery">
-               <div className="slider__item">
-      <img src="./assets/images/SpiderBoy.png" />
-    </div>
-    <div className="slider__item">
-      <img src="./assets/images/BatBoy.png" /> 
-    </div>
-    <div className="slider__item">
-      <img src="./assets/images/SpiderBoy.png" />
-    </div>
+                    <div className="slider__item">
+                    <img src="./assets/images/SpiderBoy.png" />
+                    </div>
+                    <div className="slider__item">
+                    <img src="./assets/images/BatBoy.png" /> 
+                    </div>
+                    <div className="slider__item">
+                    <img src="./assets/images/SpiderBoy.png" />
+                    </div>
                 <div className="gallery-controls"></div>
             </div> */}
         </div>
