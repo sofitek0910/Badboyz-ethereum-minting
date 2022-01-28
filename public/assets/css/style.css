@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'megrimfont';
     src: url('../fonts/Act_Of_Rejection.ttf');
@@ -9,16 +10,7 @@
 
 @font-face {
     font-family: 'Rubik';
-    src: url('../fonts/PressStart2P-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'headlinefont';
-    src: url('../fonts/ATLANTISBOLD.TTF');
-}
-
-.headline-font {
-    font-family: 'headlinefont'!important;
+    src: url('../fonts/static/Rubik-Bold.ttf');
 }
 
 .rubik-font {
@@ -133,6 +125,43 @@
     z-index: -5;
 }
 
+.roadmap-title {
+    font-weight: 600;
+    font-size: 2vw;
+}
+
+.roadmap-content {
+    font-size: 1.3vw;
+}
+
+.percent25-text {
+    position: absolute;
+    width: 28%;
+    top: 19%;
+    left: 14.5%;
+}
+
+.percent50-text {
+    position: absolute;
+    width: 28%;
+    top: 37%;
+    right: 10%;
+}
+
+.percent75-text {
+    position: absolute;
+    width: 25%;
+    top: 54.5%;
+    left: 14.5%;
+}
+
+.percent100-text {
+    position: absolute;
+    width: 25%;
+    top: 72%;
+    right: 13%;
+}
+
 .fly {
     width: 10%;
     position: absolute;
@@ -179,15 +208,164 @@
     z-index: -10;
 }
 
+.faq-section {
+    position: relative;
+}
+
+.section-qa {
+    padding: 80px 80px 0 80px;
+    position: absolute;
+    top: 20%;
+}
+
+.section-qa .title h2 {
+    font-size: 4.3vw;
+}
+
+.footer_round {
+    margin-bottom: 50px;
+}
+
+.accordion-container {
+    border: #000 6px solid;
+    border-radius: 10px;
+}
+
+.accordion {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-font {
+    color: #000;
+    font-size: 1.6vw;
+    font-weight: 700;
+}
+
+.accordion:after {
+    content: '';
+    width: 3vw;
+    height: 3vw;
+    background-size: cover;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #fff;
+}
+
+.accordion.active {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.panel p {
+    font-size: 1.6vw;
+    color: #000;
+}
+
+
+/* main  ENd */
+
 @media screen and (max-width: 900px){
     .comic-images-section {
         padding: 40px 0 60px 0;
     }
 }
 
+@media screen and (max-width: 680px){
+    .percent75-text {
+        top: 53.8%;
+    }
+    .percent100-text {
+        top: 71.2%;
+    }
+}
+
+@media(max-width: 576px) {
+    .fly {
+        left: 43%;
+    }
+    .pc {
+        display: none;
+    }
+    .sp {
+        display: block;
+    }
+    h4 {
+        font-size: 6vw;
+    }
+    .section-qa .title h2 {
+        font-size: 6.3vw;
+    }
+    .accordion:after {
+        content: '';
+        width: 6vw;
+        height: 5vw;
+        background-size: cover;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    .panel p {
+        font-size: 3vw;
+        color: #000;
+    }
+
+    .section-qa {
+        padding: 8vw 0;
+    }
+}
+
 @media screen and (max-width: 570px){
+    .percent25-text {
+        top: 18.1%;
+    }
+    .percent50-text {
+        top: 36.2%;
+    }
+    .percent75-text {
+        top: 53.4%;
+    }
+    .percent100-text {
+        top: 71%;
+    }
     .comic-images-section {
         padding: 20px 0 40px 0;
     }
 }
-  
+
+@media screen and (max-width: 460px){
+    .percent25-text {
+        top: 17.5%;
+    }
+    .percent50-text {
+        top: 35.5%;
+    }
+    .percent75-text {
+        top: 53%;
+    }
+    .percent100-text {
+        top: 70.5%;
+    }
+}

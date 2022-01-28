@@ -13,6 +13,7 @@
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet"/> -->
 
     <!-- Style Begin-->
+    <!-- <link rel="stylesheet" href="./assets/plugins/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./assets/plugins/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/">
@@ -30,6 +31,22 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
 <!-- <script src="./assets/js/carousel.js"></script> -->
 <script src="./assets/js/wow.js"></script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 <!-- <script>
     $(function(){
         $('.fa-align-justify').on('click', function(){
