@@ -116,6 +116,12 @@ function Home() {
   const powObj = useRef();
   const kaboomObj = useRef();
   const originObj = useRef();
+  const storyObj1 = useRef();
+  const storyObj2 = useRef();
+  const storyObj3 = useRef();
+  const storyObj4 = useRef();
+  const storyObj5 = useRef();
+  const storyObj6 = useRef();
 
   const handleScroll = () => {
     var flyObjDimension = flyObj.current.getBoundingClientRect();
@@ -124,6 +130,12 @@ function Home() {
     var powObjDimension = powObj.current.getBoundingClientRect();
     var kaboomObjDimension = kaboomObj.current.getBoundingClientRect();
     var originObjDimension = originObj.current.getBoundingClientRect();
+    var storyObj1Dimension = storyObj1.current.getBoundingClientRect();
+    var storyObj2Dimension = storyObj2.current.getBoundingClientRect();
+    var storyObj3Dimension = storyObj3.current.getBoundingClientRect();
+    var storyObj4Dimension = storyObj4.current.getBoundingClientRect();
+    var storyObj5Dimension = storyObj5.current.getBoundingClientRect();
+    var storyObj6Dimension = storyObj6.current.getBoundingClientRect();
 
     if ( flyObjDimension.top+flyObj.current.height/2 <= window.innerHeight/2 ) {
         console.log("center position")
@@ -153,12 +165,53 @@ function Home() {
         kaboomObj.current.style.setProperty("z-index", "-10")
     }
 
-    if ( originObjDimension.top <= window.innerHeight && originObjDimension.bottom >= 100 ) {
+    if ( originObjDimension.top <= window.innerHeight && originObjDimension.bottom >= 150 ) {
         originObj.current.style.setProperty("animation-name", "flash");
         originObj.current.style.setProperty("animation-duration", "1.5s");
         originObj.current.style.setProperty("animation-iteration-count", "1");
         originObj.current.style.setProperty("animation-fill-mode", "forwards");
     } 
+
+    if ( storyObj1Dimension.top <= window.innerHeight && storyObj1Dimension.bottom >= 150 ) {
+        storyObj1.current.style.setProperty("animation-name", "story");
+        storyObj1.current.style.setProperty("animation-duration", "1s");
+        storyObj1.current.style.setProperty("animation-delay", ".5s");
+        storyObj1.current.style.setProperty("animation-iteration-count", "1");
+        storyObj1.current.style.setProperty("animation-fill-mode", "forwards");
+
+        storyObj2.current.style.setProperty("animation-name", "story");
+        storyObj2.current.style.setProperty("animation-duration", "1s");
+        storyObj2.current.style.setProperty("animation-delay", "1s");
+        storyObj2.current.style.setProperty("animation-iteration-count", "1");
+        storyObj2.current.style.setProperty("animation-fill-mode", "forwards");
+
+        storyObj3.current.style.setProperty("animation-name", "story");
+        storyObj3.current.style.setProperty("animation-duration", "1s");
+        storyObj3.current.style.setProperty("animation-delay", "1.5s");
+        storyObj3.current.style.setProperty("animation-iteration-count", "1");
+        storyObj3.current.style.setProperty("animation-fill-mode", "forwards");
+    } 
+
+    if ( storyObj4Dimension.top <= window.innerHeight && storyObj4Dimension.bottom >= 150 ) {
+        storyObj4.current.style.setProperty("animation-name", "story");
+        storyObj4.current.style.setProperty("animation-duration", "1s");
+        storyObj4.current.style.setProperty("animation-delay", ".5s");
+        storyObj4.current.style.setProperty("animation-iteration-count", "1");
+        storyObj4.current.style.setProperty("animation-fill-mode", "forwards");
+
+        storyObj5.current.style.setProperty("animation-name", "story");
+        storyObj5.current.style.setProperty("animation-duration", "1s");
+        storyObj5.current.style.setProperty("animation-delay", "1s");
+        storyObj5.current.style.setProperty("animation-iteration-count", "1");
+        storyObj5.current.style.setProperty("animation-fill-mode", "forwards");
+
+        storyObj6.current.style.setProperty("animation-name", "story");
+        storyObj6.current.style.setProperty("animation-duration", "1s");
+        storyObj6.current.style.setProperty("animation-delay", "1.5s");
+        storyObj6.current.style.setProperty("animation-iteration-count", "1");
+        storyObj6.current.style.setProperty("animation-fill-mode", "forwards");
+    } 
+    
   }
 
   useEffect(() => {
@@ -173,10 +226,28 @@ function Home() {
   return (
     <div>
         <div className="trailer-video">
-            <img className="width-100" src="./assets/images/trailer_video.jpg"/>
+            <video className="width-100 landing-video" src="./assets/images/video01.mp4" autoPlay muted loop></video>
+            {/* <img className="width-100" src="./assets/images/trailer_video.jpg"/> */}
         </div>
         <div className="badboy">
-            <img className="width-100" src="./assets/images/badboyz.jpg"/>
+            <img className="width-100 badboyz" src="./assets/images/badboyz.jpg"/>
+        </div>
+        <div className="our-story">
+            <img className="width-100 our-story-back" src="./assets/images/our-story.png"/>
+            <div className="story-block">
+                <div className="left-block">
+                    <img className="story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
+                    <img className="story-image story-4" ref={storyObj4} src="./assets/images/story4.png"/>
+                </div>
+                <div className="medium-block">
+                    <img className="story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
+                    <img className="story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
+                </div>
+                <div className="right-block">
+                    <img className="story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
+                    <img className="story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
+                </div>
+            </div>
         </div>
         <div className="road-map">
             <img className="width-100 roadmap-image" src="./assets/images/roadmap.jpg"/>
@@ -188,15 +259,15 @@ function Home() {
                 <img className="pow" ref={powObj} src="./assets/images/pow.png"/>
                 <img className="kaboom" ref={kaboomObj} src="./assets/images/kaboom.png"/>
             </div>
-            <div className="roadmap-text-section rubik-font">
+            <div className="roadmap-text-section">
                 <div className="percent25-text">
                     <span className="roadmap-title">
                         Snack Time!
                     </span>
                     <div className="roadmap-content">
-                        First origin stories. <br/>
-                        Launch of Discord. <br/>
-                        BadBoyz animated trailer Chapter I.  
+                        <i class="fa fa-circle"></i> First origin stories. <br/>
+                        <i class="fa fa-circle"></i> Launch of Discord. <br/>
+                        <i class="fa fa-circle"></i> BadBoyz animated trailer Chapter I.  
                     </div>
                 </div>
                 <div className="percent50-text">
@@ -204,10 +275,10 @@ function Home() {
                         Good guys turn bad.
                     </span>
                     <div className="roadmap-content">
-                        Start of marketing campaign. <br/>
-                        BadBoyz going live. <br/>
-                        Chapter I reveal. <br/>
-                        XXXX.
+                        <i class="fa fa-circle"></i> Start of marketing campaign. <br/>
+                        <i class="fa fa-circle"></i> BadBoyz going live. <br/>
+                        <i class="fa fa-circle"></i> Chapter I reveal. <br/>
+                        <i class="fa fa-circle"></i> XXXX.
                     </div>
                 </div>
                 <div className="percent75-text">
@@ -215,9 +286,9 @@ function Home() {
                         Is it a bird, is it a plane?
                     </span>
                     <div className="roadmap-content">
-                        40% of total secondary sales will be used to sweep the ﬂoor! <br/>
-                        BadBoyz gym clothes. <br/>
-                        BadBoyz #GetFitForRewards challenge. <br/>
+                        <i class="fa fa-circle"></i> 40% of total secondary sales will be used to sweep the ﬂoor! <br/>
+                        <i class="fa fa-circle"></i> BadBoyz gym clothes. <br/>
+                        <i class="fa fa-circle"></i> BadBoyz #GetFitForRewards challenge. <br/>
                     </div>
                 </div>
                 <div className="percent100-text">
@@ -225,9 +296,9 @@ function Home() {
                         Badboyz Metaverse
                     </span>
                     <div className="roadmap-content">
-                        Join the Baddest Superhero League and experience them at hosted events in a 
+                        <i class="fa fa-circle"></i> Join the Baddest Superhero League and experience them at hosted events in a 
                         Metaverse chosen by the community. <br/> 
-                        First animations based on holder NFTs.
+                        <i class="fa fa-circle"></i> First animations based on holder NFTs.
                     </div>
                 </div>
             </div>
@@ -243,14 +314,14 @@ function Home() {
                     </a>
                 </div>
                 <div className="comic-item">
-                    <a href="javascript:;">
+                    <a href="./assets/images/BatBoy.png">
                         <img className="bat-boy comic-item-image" src="./assets/images/BatBoy.png" /> 
                     </a>
                     
                 </div>
                 <div className="comic-item">
                     <a href="javascript:;">
-                        <img className="coming-soon comic-item-image" src="./assets/images/SpiderBoy.png" />
+                        <img className="coming-soon comic-item-image" src="./assets/images/ComingSoon.png" />
                     </a>
                 </div>
             </div>
@@ -268,220 +339,109 @@ function Home() {
             </div> */}
         </div>
         <div className="join-us">
-            <img className="width-100" src="./assets/images/join_us.jpg"/>
+            <img className="width-100 join-us-img" src="./assets/images/join_us.jpg"/>
+            <div className="join-us-text rubik-font text-center">
+                Get together with likeminded Badboyz and shower other projects with warm, compassionate love!<br/>
+                Come join the BadBoyz adventure in the official Discord server!
+                <div className="text-center">
+                    <a href="javascript:;">
+                        <img className="width-100 discord-button" src="./assets/images/discord-button.png"/>
+                    </a>
+                </div>
+            </div>
         </div>
         <div className="our-team">
-            <img className="width-100" src="./assets/images/our_team.jpg"/>
+            <img className="width-100 our-team-back" src="./assets/images/our_team.jpg"/>
+            <img className="member founder" src="./assets/images/founder.png"/>
+            <img className="member developer" src="./assets/images/developer.png"/>
+            <img className="member designer" src="./assets/images/designer.png"/>
         </div>
         <div className="faq-section">
-            <img className="width-100" src="./assets/images/faq.jpg"/>
-            <div className="accordion" id="accordionExample">
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingOne">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      <button className="phase-btn">phase 1</button> initiation
-                    </div>
-                  </h2>
-                  <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      WELCOME TO DEAD PUNKZ.PRESALE &
-                      MINT DATE ANNOUNCED FOR THE
-                      SPOOKY SKELLY PUNKZ
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingTwo">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <button className="phase-btn">phase 2</button> reveal
-                    </div>
-                  </h2>
-                  <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      ALL SPOOKY SKELLY PUNKS ARE
-                      REVEALED TO HOLDERS
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="heading3">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                      <button className="phase-btn">phase 3</button> vamp airdrops
-                    </div>
-                  </h2>
-                  <div id="collapse3" className="accordion-collapse collapse rubik-font" aria-labelledby="heading3" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      1993 Vamp Punkz airdropped to 
-                      random Spooky Skelly Punk holders
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="heading4">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                      <button className="phase-btn">phase 4</button> DEAD PUNKZ Z
-                    </div>
-                  </h2>
-                  <div id="collapse4" className="accordion-collapse collapse rubik-font" aria-labelledby="heading4" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      Reveal of presale and mint date 
-                      for DEAD PUNK Zombies 
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="heading3">
-                    <div className="accordion-button collapsed 
-                    rubik-font" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                      <button className="phase-btn">phase 5</button> mummy airdrops
-                    </div>
-                  </h2>
-                  <div id="collapse5" className="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      777 Mummy Punkz airdropped to 
-                      random DEAD PUNK Zombies holders
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="heading6">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                      <button className="phase-btn">phase 6</button> merch realease
-                    </div>
-                  </h2>
-                  <div id="collapse6" className="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      DeadPunkz™ official clothing line 
-                      release exclusively to DEAD PUNKZ 
-                      Holders
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="heading7">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                      <button className="phase-btn">phase 7</button> customization
-                    </div>
-                  </h2>
-                  <div id="collapse7" className="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      Custom Dead Punk CREATOR, create 
-                      a DeadPunk and gain cool new 
-                      traits and additions to your Dead
-                      Punk
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="heading8">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                      <button className="phase-btn">phase 8</button> dead punkz festival
-                    </div>
-                  </h2>
-                  <div id="collapse8" className="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      Exclusive Festival for all holders 
-                      of DeadPunkz, with concerts, food, 
-                      celebrity appearances and more
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="heading9">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                      <button className="phase-btn">phase 9</button> deadverse beta
-                    </div>
-                  </h2>
-                  <div id="collapse9" className="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                      Reveal and first access the beta 
-                      to DeadPunkz game
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="heading10">
-                    <div className="accordion-button collapsed rubik-font" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                      <button className="phase-btn phase10">phase 10</button> deadverse
-                    </div>
-                  </h2>
-                  <div id="collapse10" className="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionExample">
-                    <div className="accordion-body rubik-font">
-                    DeadPunkz meta verse, an undead 
-                      mirror to our own with passive income 
-                      potential, real estate and job 
-                      opportunities, along with immersive 
-                      aesthetics and exclusive holder 
-                      benefits. DEADVERSE games release.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <section className="section-qa rubik-font">
-                <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img className="width-100 footer-back" src="./assets/images/faq.jpg"/>
+            <section className="rubik-font" id="accordionExample">
+                <div className="row section-qa">
+                    <div className="col-md-6 col-sm-12">
                         <div className="mt-4 accordion-container footer_round">
-                            <button className="accordion py-2">
-                                <h2 className="footer-font">1. Who are the BadBoyz?</h2>
-                            </button>
-                            <div className="panel">
-                                <p>BadBoyz is a collection of 3333 unique superheroes exploring their own multiverse and becoming the first web3 related animated superhero series.</p>
+                            <div className="accordion py-2" id="headingOne">
+                                <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Who are the BadBoyz?
+                                </h2>
+                            </div>
+                            <div id="collapseOne" className="accordion-collapse collapse panel" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <p>
+                                    BadBoyz is a collection of 3333 unique superheroes exploring their own multiverse and becoming the first web3 related animated superhero series.
+                                </p>
                             </div>
                         </div>
                         <div className="mt-4 accordion-container footer_round">
-                            <button className="accordion py-2">
-                                <h2 className="footer-font"> 3. Where will the minting take place?</h2>
-                            </button>
-                            <div className="panel">
+                            <div className="accordion py-2" id="headingTwo">
+                                <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Where will the minting take place?
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" className="accordion-collapse collapse panel" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <p>
                                     The minting will take place on our official website: https://badboyz.io/. 
-                                    Keep an eye at the announcement channels in the official Discord for the exact link and beware of DM scammers. 
+                                    Keep an eye at the announcement channels in the official Discord for the exact link and beware of DM scammers.
                                 </p>
                             </div>
                         </div>
                         <div className="mt-4 accordion-container footer_round">
-                            <button className="accordion py-2">
-                                <h2 className="footer-font">5. What will be the mint price?</h2>
-                            </button>
-                            <div className="panel">
-                                <p>The public/pre sale mint price is yet to be announced.</p>
+                            <div className="accordion py-2" id="headingThree">
+                                <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What will be the mint price?
+                                </h2>
+                            </div>
+                            <div id="collapseThree" className="accordion-collapse collapse panel" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <p>
+                                    The public/pre sale mint price is yet to be announced.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div className="col-md-6 col-sm-12">
                         <div className="mt-4 accordion-container footer_round">
-                            <button className="accordion py-2">
-                                <h2 className="footer-font"> 2. When is the drop?</h2>
-                            </button>
-                            <div className="panel">
-                                <p>The public/pre sale date is yet to be announced in our official Discord announcements channel.</p>
+                            <div className="accordion py-2" id="headingFour">
+                                <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    When is the drop?
+                                </h2>
                             </div>
-                        </div>
-                        <div className="mt-4 accordion-container footer_round">
-                            <button className="accordion py-2">
-                                <h2 className="footer-font">4. How can I get whitelisted?</h2>
-                            </button>
-                            <div className="panel">
+                            <div id="collapseFour" className="accordion-collapse collapse panel" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                 <p>
-                                    To save yourself a spot, you need to join the Discord, be active and helpful 
-                                    and follow the whitelisting process described in our dedicated „how-to-whitelist“ channel.
+                                The public/pre sale date is yet to be announced in our official Discord announcements channel.
                                 </p>
                             </div>
                         </div>
                         <div className="mt-4 accordion-container footer_round">
-                            <button className="accordion py-2">
-                                <h2 className="footer-font"> 6. What happens after Roadmap completion?</h2>
-                            </button>
-                            <div className="panel">
+                            <div className="accordion py-2" id="headingFive">
+                                <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    How can I get whitelisted?
+                                </h2>
+                            </div>
+                            <div id="collapseFive" className="accordion-collapse collapse panel" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                 <p>
-                                    The BadBoyz will continue their venture into the unknown depths of the Multiverse. 
-                                    Fueling their animated series with exciting story lines and new plot twists.
+                                    To save yourself a spot, you need to join the Discord, be active and helpful and follow the whitelisting process described in our dedicated „how-to-whitelist“ channel.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="mt-4 accordion-container footer_round">
+                            <div className="accordion py-2" id="headingSix">
+                                <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    What happens after Roadmap completion?
+                                </h2>
+                            </div>
+                            <div id="collapseSix" className="accordion-collapse collapse panel" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <p>
+                                    The BadBoyz will continue their venture into the unknown depths of the Multiverse. Fueling their animated series with exciting story lines and new plot twists.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+        </div>
+        <div className="footer-section">
+            <img className="width-100" src="./assets/images/footer.jpg"/>
         </div>
     </div>
   );

@@ -17,9 +17,66 @@
     font-family: 'Rubik';
 }
 
+@font-face {
+    font-family: 'comic';
+    src: url('../fonts/LDFComicSans.ttf');
+}
+
+.comic-font {
+    font-family: 'comic';
+}
+
+@font-face {
+    font-family: 'comic-light';
+    src: url('../fonts/LDFComicSansLight.ttf');
+}
+
+.comic-light-font {
+    font-family: 'comic-light';
+}
+
+
 /*  my new css */
 .width-100 {
     width: 100%;
+}
+
+.landing-video {
+    border: 10px solid #000;
+}
+
+.badboyz {
+    margin-top: -8px;
+}
+
+.our-story {
+    position: relative;
+}
+
+.story-block {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 26.5%;
+}
+
+.story-image {
+    width: 100%;
+    padding: 3%;
+    opacity: 0;
+}
+
+@keyframes story {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .origin-story {
@@ -126,11 +183,14 @@
 }
 
 .roadmap-title {
+    font-family: 'comic';
     font-weight: 600;
     font-size: 2vw;
 }
 
 .roadmap-content {
+    font-family: 'comic-light';
+    font-weight: 900;
     font-size: 1.3vw;
 }
 
@@ -151,14 +211,14 @@
 .percent75-text {
     position: absolute;
     width: 25%;
-    top: 54.5%;
+    top: 54.8%;
     left: 14.5%;
 }
 
 .percent100-text {
     position: absolute;
     width: 25%;
-    top: 72%;
+    top: 73%;
     right: 13%;
 }
 
@@ -208,24 +268,98 @@
     z-index: -10;
 }
 
+.join-us {
+    margin-top: -1px;
+    position: relative;
+}
+
+.join-us-text {
+    width: 31%;
+    position: absolute;
+    top: 41%;
+    right: 9.5%;
+    font-size: 1.6vw;
+}
+
+.discord-button {
+    margin-top: 3%;
+    width: 70%;
+}
+
+.discord-button:hover {
+    transform: scale(1.02);
+    transition: .5s;
+}
+
+.our-team {
+    position: relative;
+}
+
+.member {
+    width: 25.5%;
+    border: 5px solid #000;
+    border-radius: 5px;
+}
+
+.founder {
+    position: absolute;
+    top: 34%;
+    left: 8.5%;
+}
+
+.developer {
+    position: absolute;
+    top: 34%;
+    left: 37.2%;
+}
+
+.designer {
+    position: absolute;
+    top: 34%;
+    right: 8.5%;
+}
+
+
 .faq-section {
     position: relative;
 }
 
-.section-qa {
-    padding: 80px 80px 0 80px;
-    position: absolute;
-    top: 20%;
+.row {
+    margin: 0!important;
 }
 
-.section-qa .title h2 {
-    font-size: 4.3vw;
+.section-qa {
+    padding: 80px 80px 0 80px;
+    margin-top: -46%!important;
 }
 
 .footer_round {
+    border: 6px solid #161616;
+    padding: 5px 10px 0 10px;
+    border-radius: 10px;
     margin-bottom: 50px;
+    background-color: #fff;
 }
 
+.footer-font {
+    color: #000;
+    font-size: 1.6vw;
+    font-weight: 700;
+}
+
+.panel p {
+    font-size: 1.3vw;
+} 
+
+.accordion {
+    cursor: pointer;
+}
+
+.footer-section {
+    margin-top: 11%;
+}
+
+/* 
 .accordion-container {
     border: #000 6px solid;
     border-radius: 10px;
@@ -245,12 +379,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.footer-font {
-    color: #000;
-    font-size: 1.6vw;
-    font-weight: 700;
 }
 
 .accordion:after {
@@ -279,17 +407,96 @@ button:focus {
     outline: none;
 }
 
-.panel p {
-    font-size: 1.6vw;
-    color: #000;
-}
-
 
 /* main  ENd */
+
+@media screen and (max-width: 1120px){
+    .section-qa {
+        margin-top: -48%!important;
+    }
+    
+    .footer_round {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    .section-qa {
+        margin-top: -49%!important;
+    }
+
+    .footer-font {
+        font-size: 1.5vw;
+    }
+    
+    .footer_round {
+        margin-bottom: 20px;
+    }
+}
 
 @media screen and (max-width: 900px){
     .comic-images-section {
         padding: 40px 0 60px 0;
+    }
+    .section-qa {
+        margin-top: -52%!important;
+    }
+
+    .footer-font {
+        font-size: 1.4vw;
+    }
+
+    .panel p {
+        font-size: 1.1vw;
+    }
+    
+    .footer_round {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .comic-images-section {
+        padding: 40px 0 60px 0;
+    }
+    .section-qa {
+        margin-top: -52%!important;
+    }
+
+    .footer-font {
+        font-size: 1.4vw;
+    }
+
+    .panel p {
+        font-size: 1.3vw;
+    }
+    
+    .footer_round {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .footer-back {
+        display: none;
+    }
+    .faq-section {
+        background: url(../images/faq.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .footer-font {
+        font-size: 2vw;
+    }
+    .panel p {
+        font-size: 1.6vw;
+    }
+    .section-qa {
+        margin-top: 0!important;
+        padding-top: 25%!important;
+        padding-bottom: 5%;
+    }
+    .footer-section {
+        margin-top: -2%;
     }
 }
 
@@ -300,12 +507,26 @@ button:focus {
     .percent100-text {
         top: 71.2%;
     }
+    .section-qa {
+        padding-top: 28%!important;
+    }
+    .footer-font {
+        font-size: 3vw;
+    }
+    .panel p {
+        font-size: 2.5vw;
+    }
 }
 
 @media(max-width: 576px) {
-    .fly {
-        left: 43%;
+    .section-qa {
+        padding-top: 33%!important;
+        padding: 50px 50px 0 50px;
     }
+    
+    /* .fly {
+        left: 43%;
+    } */
     .pc {
         display: none;
     }
@@ -326,14 +547,6 @@ button:focus {
         font-weight: bold;
         float: right;
         margin-left: 5px;
-    }
-    .panel p {
-        font-size: 3vw;
-        color: #000;
-    }
-
-    .section-qa {
-        padding: 8vw 0;
     }
 }
 
@@ -356,6 +569,9 @@ button:focus {
 }
 
 @media screen and (max-width: 460px){
+    .section-qa {
+        padding-top: 40%!important;
+    }
     .percent25-text {
         top: 17.5%;
     }
