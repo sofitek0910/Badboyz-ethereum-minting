@@ -276,9 +276,10 @@
 .join-us-text {
     width: 31%;
     position: absolute;
-    top: 41%;
-    right: 9.5%;
-    font-size: 1.6vw;
+    top: 40%;
+    right: 9.2%;
+    font-size: 1.8vw;
+    font-weight: 600;
 }
 
 .discord-button {

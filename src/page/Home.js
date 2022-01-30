@@ -181,36 +181,38 @@ function Home() {
 
         storyObj2.current.style.setProperty("animation-name", "story");
         storyObj2.current.style.setProperty("animation-duration", "1s");
-        storyObj2.current.style.setProperty("animation-delay", "1s");
+        storyObj2.current.style.setProperty("animation-delay", "1.5s");
         storyObj2.current.style.setProperty("animation-iteration-count", "1");
         storyObj2.current.style.setProperty("animation-fill-mode", "forwards");
 
         storyObj3.current.style.setProperty("animation-name", "story");
         storyObj3.current.style.setProperty("animation-duration", "1s");
-        storyObj3.current.style.setProperty("animation-delay", "1.5s");
+        storyObj3.current.style.setProperty("animation-delay", "2.5s");
         storyObj3.current.style.setProperty("animation-iteration-count", "1");
         storyObj3.current.style.setProperty("animation-fill-mode", "forwards");
-    } 
 
-    if ( storyObj4Dimension.top <= window.innerHeight && storyObj4Dimension.bottom >= 150 ) {
         storyObj4.current.style.setProperty("animation-name", "story");
         storyObj4.current.style.setProperty("animation-duration", "1s");
-        storyObj4.current.style.setProperty("animation-delay", ".5s");
+        storyObj4.current.style.setProperty("animation-delay", "3.5s");
         storyObj4.current.style.setProperty("animation-iteration-count", "1");
         storyObj4.current.style.setProperty("animation-fill-mode", "forwards");
 
         storyObj5.current.style.setProperty("animation-name", "story");
         storyObj5.current.style.setProperty("animation-duration", "1s");
-        storyObj5.current.style.setProperty("animation-delay", "1s");
+        storyObj5.current.style.setProperty("animation-delay", "4.5s");
         storyObj5.current.style.setProperty("animation-iteration-count", "1");
         storyObj5.current.style.setProperty("animation-fill-mode", "forwards");
 
         storyObj6.current.style.setProperty("animation-name", "story");
         storyObj6.current.style.setProperty("animation-duration", "1s");
-        storyObj6.current.style.setProperty("animation-delay", "1.5s");
+        storyObj6.current.style.setProperty("animation-delay", "5.5s");
         storyObj6.current.style.setProperty("animation-iteration-count", "1");
         storyObj6.current.style.setProperty("animation-fill-mode", "forwards");
     } 
+
+    // if ( storyObj4Dimension.top <= window.innerHeight && storyObj4Dimension.bottom >= 150 ) {
+       
+    // } 
     
   }
 
@@ -265,9 +267,9 @@ function Home() {
                         Snack Time!
                     </span>
                     <div className="roadmap-content">
-                        <i class="fa fa-circle"></i> First origin stories. <br/>
-                        <i class="fa fa-circle"></i> Launch of Discord. <br/>
-                        <i class="fa fa-circle"></i> BadBoyz animated trailer Chapter I.  
+                        <i className="fa fa-circle"></i> First origin stories. <br/>
+                        <i className="fa fa-circle"></i> Launch of Discord. <br/>
+                        <i className="fa fa-circle"></i> BadBoyz animated trailer Chapter I.  
                     </div>
                 </div>
                 <div className="percent50-text">
@@ -275,10 +277,10 @@ function Home() {
                         Good guys turn bad.
                     </span>
                     <div className="roadmap-content">
-                        <i class="fa fa-circle"></i> Start of marketing campaign. <br/>
-                        <i class="fa fa-circle"></i> BadBoyz going live. <br/>
-                        <i class="fa fa-circle"></i> Chapter I reveal. <br/>
-                        <i class="fa fa-circle"></i> XXXX.
+                        <i className="fa fa-circle"></i> Start of marketing campaign. <br/>
+                        <i className="fa fa-circle"></i> BadBoyz going live. <br/>
+                        <i className="fa fa-circle"></i> Chapter I reveal. <br/>
+                        <i className="fa fa-circle"></i> XXXX.
                     </div>
                 </div>
                 <div className="percent75-text">
@@ -286,9 +288,9 @@ function Home() {
                         Is it a bird, is it a plane?
                     </span>
                     <div className="roadmap-content">
-                        <i class="fa fa-circle"></i> 40% of total secondary sales will be used to sweep the ﬂoor! <br/>
-                        <i class="fa fa-circle"></i> BadBoyz gym clothes. <br/>
-                        <i class="fa fa-circle"></i> BadBoyz #GetFitForRewards challenge. <br/>
+                        <i className="fa fa-circle"></i> 40% of total secondary sales will be used to sweep the ﬂoor! <br/>
+                        <i className="fa fa-circle"></i> BadBoyz gym clothes. <br/>
+                        <i className="fa fa-circle"></i> BadBoyz #GetFitForRewards challenge. <br/>
                     </div>
                 </div>
                 <div className="percent100-text">
@@ -296,9 +298,9 @@ function Home() {
                         Badboyz Metaverse
                     </span>
                     <div className="roadmap-content">
-                        <i class="fa fa-circle"></i> Join the Baddest Superhero League and experience them at hosted events in a 
+                        <i className="fa fa-circle"></i> Join the Baddest Superhero League and experience them at hosted events in a 
                         Metaverse chosen by the community. <br/> 
-                        <i class="fa fa-circle"></i> First animations based on holder NFTs.
+                        <i className="fa fa-circle"></i> First animations based on holder NFTs.
                     </div>
                 </div>
             </div>
@@ -309,7 +311,7 @@ function Home() {
             </div>
             <div className="comic-images-section">
                 <div className="comic-item">
-                    <a>
+                    <a href="./assets/images/BatBoy.png">
                         <img className="spider-boy comic-item-image" src="./assets/images/SpiderBoy.png" />
                     </a>
                 </div>
@@ -320,7 +322,7 @@ function Home() {
                     
                 </div>
                 <div className="comic-item">
-                    <a href="javascript:;">
+                    <a href="./assets/images/ComingSoon.png">
                         <img className="coming-soon comic-item-image" src="./assets/images/ComingSoon.png" />
                     </a>
                 </div>
@@ -340,11 +342,11 @@ function Home() {
         </div>
         <div className="join-us">
             <img className="width-100 join-us-img" src="./assets/images/join_us.jpg"/>
-            <div className="join-us-text rubik-font text-center">
+            <div className="join-us-text comic-font text-center">
                 Get together with likeminded Badboyz and shower other projects with warm, compassionate love!<br/>
                 Come join the BadBoyz adventure in the official Discord server!
                 <div className="text-center">
-                    <a href="javascript:;">
+                    <a href="#">
                         <img className="width-100 discord-button" src="./assets/images/discord-button.png"/>
                     </a>
                 </div>
