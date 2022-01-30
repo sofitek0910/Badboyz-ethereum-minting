@@ -18,12 +18,30 @@
 }
 
 @font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/static/Rubik-Bold.ttf');
+}
+
+.rubik-font {
+    font-family: 'Rubik';
+}
+
+@font-face {
     font-family: 'comic';
     src: url('../fonts/LDFComicSans.ttf');
 }
 
 .comic-font {
     font-family: 'comic';
+}
+
+@font-face {
+    font-family: 'comic-caption';
+    src: url('../fonts/Comic_Book.ttf');
+}
+
+.comic-font-caption {
+    font-family: 'comic-caption';
 }
 
 @font-face {
@@ -203,23 +221,23 @@
 
 .percent50-text {
     position: absolute;
-    width: 28%;
+    width: 26%;
     top: 37%;
     right: 10%;
 }
 
 .percent75-text {
     position: absolute;
-    width: 25%;
-    top: 54.8%;
-    left: 14.5%;
+    width: 23%;
+    top: 53%;
+    left: 14%;
 }
 
 .percent100-text {
     position: absolute;
-    width: 25%;
-    top: 73%;
-    right: 13%;
+    width: 24%;
+    top: 72%;
+    right: 13.5%;
 }
 
 .fly {
@@ -282,24 +300,110 @@
     font-weight: 600;
 }
 
-.discord-button {
-    margin-top: 3%;
-    width: 70%;
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #f1f1f1;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
 }
 
-.discord-button:hover {
-    transform: scale(1.02);
-    transition: .5s;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animate {
+    margin-top: 2%;
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .our-team {
     position: relative;
+    /* background: url(../images/Our-Team.png) no-repeat;
+    background-size: 100% 100%; */
+}
+
+.our-team-content {
+    position: absolute;
+    top: 18.5%;
+    padding: 5% 6%;
 }
 
 .member {
-    width: 25.5%;
+    width: 32%;
     border: 5px solid #000;
     border-radius: 5px;
+}
+
+.co-founder1 {
+    margin-left: 32%;
+}
+
+.co-founder2 {
+    margin-right: 32%;
+}
+
+.member-second-row {
+    width: 48%;
+}
+
+.team-caption {
+    font-family: 'comic-caption';
+    font-size: 1.7vw;
+}
+
+.team-block {
+    display: flex;
+    justify-content: center;
 }
 
 .founder {
@@ -410,8 +514,17 @@ button:focus {
 
 
 /* main  ENd */
+@media screen and (max-width: 1300px){
+    .footer-section {
+        margin-top: 6.5%;
+    }
+}
 
 @media screen and (max-width: 1120px){
+    .footer-section {
+        margin-top: 15%;
+    }
+
     .section-qa {
         margin-top: -48%!important;
     }
@@ -432,6 +545,12 @@ button:focus {
     
     .footer_round {
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1030px){
+    .footer-section {
+        margin-top: 11%;
     }
 }
 
@@ -553,13 +672,14 @@ button:focus {
 
 @media screen and (max-width: 570px){
     .percent25-text {
-        top: 18.1%;
+        top: 17.1%;
+        left: 15%;
     }
     .percent50-text {
         top: 36.2%;
     }
     .percent75-text {
-        top: 53.4%;
+        top: 52.4%;
     }
     .percent100-text {
         top: 71%;
@@ -580,7 +700,7 @@ button:focus {
         top: 35.5%;
     }
     .percent75-text {
-        top: 53%;
+        top: 51.8%;
     }
     .percent100-text {
         top: 70.5%;

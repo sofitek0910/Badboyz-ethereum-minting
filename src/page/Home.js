@@ -252,7 +252,7 @@ function Home() {
             </div>
         </div>
         <div className="road-map">
-            <img className="width-100 roadmap-image" src="./assets/images/roadmap.jpg"/>
+            <img className="width-100 roadmap-image" src="./assets/images/WEB5-Background.png"/>
             <img className="width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
             <div className="text-center">
                 <img className="fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
@@ -345,18 +345,54 @@ function Home() {
             <div className="join-us-text comic-font text-center">
                 Get together with likeminded Badboyz and shower other projects with warm, compassionate love!<br/>
                 Come join the BadBoyz adventure in the official Discord server!
-                <div className="text-center">
-                    <a href="#">
-                        <img className="width-100 discord-button" src="./assets/images/discord-button.png"/>
-                    </a>
+                <div className="text-box text-center">
+                    <a href="#" className="btn btn-white btn-animate">JOIN DISCORD</a>
                 </div>
             </div>
         </div>
         <div className="our-team">
-            <img className="width-100 our-team-back" src="./assets/images/our_team.jpg"/>
-            <img className="member founder" src="./assets/images/founder.png"/>
-            <img className="member developer" src="./assets/images/developer.png"/>
-            <img className="member designer" src="./assets/images/designer.png"/>
+            <img className="width-100 our-team-back" src="./assets/images/our-team.png"/>
+            <div className="our-team-content">
+                <div className="team-block first-team-row">
+                    <div className="text-center">
+                        <img className="member co-founder1" src="./assets/images/pp.jpg"/>
+                        <div className="team-caption co-founder1">
+                            <div>CO-FOUNDER</div>
+                            <div>NAME</div>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <img className="member co-founder2" src="./assets/images/pp.jpg"/>
+                        <div className="team-caption co-founder2">
+                            <div>CO-FOUNDER</div>
+                            <div>NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="team-block">
+                    <div className="text-center">
+                        <img className="member-second-row member" src="./assets/images/pp.jpg"/>
+                        <div className="team-caption">
+                            <div>DEVELOPER</div>
+                            <div>NAME</div>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <img className="member-second-row member" src="./assets/images/pp.jpg"/>
+                        <div className="team-caption">
+                            <div>MARKETER</div>
+                            <div>NAME</div>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <img className="member-second-row member" src="./assets/images/pp.jpg"/>
+                        <div className="team-caption">
+                            <div>ARTIST</div>
+                            <div>NAME</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div className="faq-section">
             <img className="width-100 footer-back" src="./assets/images/faq.jpg"/>
