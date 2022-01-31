@@ -214,30 +214,30 @@
 
 .percent25-text {
     position: absolute;
-    width: 28%;
-    top: 19%;
-    left: 14.5%;
+    width: 25%;
+    top: 18.5%;
+    left: 14%;
 }
 
 .percent50-text {
     position: absolute;
-    width: 26%;
+    width: 25%;
     top: 37%;
-    right: 10%;
+    right: 13%;
 }
 
 .percent75-text {
     position: absolute;
-    width: 23%;
-    top: 53%;
+    width: 25%;
+    top: 55%;
     left: 14%;
 }
 
 .percent100-text {
     position: absolute;
     width: 24%;
-    top: 72%;
-    right: 13.5%;
+    top: 73%;
+    right: 14%;
 }
 
 .fly {
@@ -294,10 +294,16 @@
 .join-us-text {
     width: 31%;
     position: absolute;
-    top: 40%;
+    top: 38.5%;
     right: 9.2%;
     font-size: 1.8vw;
     font-weight: 600;
+}
+
+.join-us-text-block {
+    padding: 2%;
+    background-color: #fff;
+    border: 4px solid #000;
 }
 
 .btn:link,
@@ -323,7 +329,8 @@
 
 .btn-white {
     background-color: #fff;
-    color: #777;
+    color: #333;
+    font-weight:bolder;
 }
 
 .btn::after {
@@ -349,7 +356,7 @@
 }
 
 .btn-animate {
-    margin-top: 2%;
+    margin-top: 5%;
     animation: moveInBottom 5s ease-out;
     animation-fill-mode: backwards;
 }
@@ -621,12 +628,12 @@ button:focus {
 }
 
 @media screen and (max-width: 680px){
-    .percent75-text {
+    /* .percent75-text {
         top: 53.8%;
     }
     .percent100-text {
         top: 71.2%;
-    }
+    } */
     .section-qa {
         padding-top: 28%!important;
     }
@@ -679,10 +686,10 @@ button:focus {
         top: 36.2%;
     }
     .percent75-text {
-        top: 52.4%;
+        top: 54%;
     }
     .percent100-text {
-        top: 71%;
+        top: 72.5%;
     }
     .comic-images-section {
         padding: 20px 0 40px 0;
@@ -700,9 +707,9 @@ button:focus {
         top: 35.5%;
     }
     .percent75-text {
-        top: 51.8%;
+        top: 53.5%;
     }
     .percent100-text {
-        top: 70.5%;
+        top: 71.5%;
     }
 }

@@ -252,7 +252,7 @@ function Home() {
             </div>
         </div>
         <div className="road-map">
-            <img className="width-100 roadmap-image" src="./assets/images/WEB5-Background.png"/>
+            <img className="width-100 roadmap-image" src="./assets/images/WEB5.badboyz-Backlayer.png"/>
             <img className="width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
             <div className="text-center">
                 <img className="fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
@@ -341,11 +341,13 @@ function Home() {
             </div> */}
         </div>
         <div className="join-us">
-            <img className="width-100 join-us-img" src="./assets/images/join_us.jpg"/>
+            <img className="width-100 join-us-img" src="./assets/images/joinDiscord.png"/>
             <div className="join-us-text comic-font text-center">
-                Get together with likeminded Badboyz and shower other projects with warm, compassionate love!<br/>
-                Come join the BadBoyz adventure in the official Discord server!
-                <div className="text-box text-center">
+                <div className="join-us-text-block">
+                    Get together with likeminded Badboyz and shower other projects with warm, compassionate love!<br/>
+                    Come join the BadBoyz adventure in the official Discord server!
+                </div>
+                <div className="text-box text-center comic-caption">
                     <a href="#" className="btn btn-white btn-animate">JOIN DISCORD</a>
                 </div>
             </div>
