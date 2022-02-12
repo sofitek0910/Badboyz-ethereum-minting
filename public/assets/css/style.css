@@ -53,6 +53,10 @@
     font-family: 'comic-light';
 }
 
+.badboyz-mobile, .our-story-back-mobile, .roadmap-image-mobile, .roadmap-front-image-mobile,
+.our-team-back-mobile, .join-us-img-mobile, .footer-back-mobile, .story-block-mobile {
+    display: none;
+}
 
 /*  my new css */
 .width-100 {
@@ -108,11 +112,7 @@
 }
 
 .origin-story-title {
-     width: 32%;
-    /*animation-duration: 2s;
-    animation-name: flash;
-    animation-iteration-count: 1; */
-    margin-left: 2.5%;
+    width: 32%;
     opacity: 0;
 }
 
@@ -153,49 +153,17 @@
 .coming-soon {
     margin-left: -30%;
 }
-  
-/* .slider {
-    width: 750px;
-    margin: 0 auto;
-}
-
-.slick-arrow {
-    display: none!important;
-}
-
-.wrapper {
-    padding-bottom: 40px;
-}
-
-.slick-track {
-    padding-top: 53px;
-    padding-bottom: 53px;
-}
-
-.slick-slide {
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.slick-slide:not(.slick-current) {
-    filter: brightness(1);
-}
-
-.slick-slide.slick-current {
-    transform: scale(1.35);
-    position: relative;
-    z-index: 1;
-}
-
-.slick-slide img {
-    width: 100%;
-} */
 
 .road-map {
     position: relative;
 }
 
 .roadmap-image {
+    position: absolute;
+    z-index: -5;
+}
+
+.roadmap-image-mobile {
     position: absolute;
     z-index: -5;
 }
@@ -409,8 +377,8 @@
 }
 
 .team-block {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 27%;
 }
 
 .founder {
@@ -441,8 +409,8 @@
 }
 
 .section-qa {
-    padding: 80px 80px 0 80px;
-    margin-top: -46%!important;
+    padding: 50px 60px 0 50px;
+    margin-top: -45%!important;
 }
 
 .footer_round {
@@ -452,15 +420,21 @@
     margin-bottom: 50px;
     background-color: #fff;
 }
+.footer-img {
+    position: absolute;
+    top: 200%;
+    left: 0;
+    z-index: -1;
+}
 
 .footer-font {
     color: #000;
-    font-size: 1.6vw;
+    font-size: 1.8vw;
     font-weight: 700;
 }
 
 .panel p {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 } 
 
 .accordion {
@@ -471,52 +445,11 @@
     margin-top: 11%;
 }
 
-/* 
-.accordion-container {
-    border: #000 6px solid;
-    border-radius: 10px;
-}
-
-.accordion {
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.accordion:after {
-    content: '';
-    width: 3vw;
-    height: 3vw;
-    background-size: cover;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-.panel {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    background-color: #fff;
-}
-
-.accordion.active {
-    outline: none;
-}
-
-button:focus {
-    outline: none;
+@media screen and (min-width: 1300px){
+    .section-qa {
+        margin-top: -44%!important;
+        padding: 60px 100px 0 100px;
+    }
 }
 
 
@@ -525,6 +458,7 @@ button:focus {
     .footer-section {
         margin-top: 6.5%;
     }
+    
 }
 
 @media screen and (max-width: 1120px){
@@ -532,27 +466,10 @@ button:focus {
         margin-top: 15%;
     }
 
-    .section-qa {
-        margin-top: -48%!important;
-    }
-    
     .footer_round {
         margin-bottom: 30px;
     }
-}
 
-@media screen and (max-width: 1120px){
-    .section-qa {
-        margin-top: -49%!important;
-    }
-
-    .footer-font {
-        font-size: 1.5vw;
-    }
-    
-    .footer_round {
-        margin-bottom: 20px;
-    }
 }
 
 @media screen and (max-width: 1030px){
@@ -566,36 +483,11 @@ button:focus {
         padding: 40px 0 60px 0;
     }
     .section-qa {
-        margin-top: -52%!important;
-    }
-
-    .footer-font {
-        font-size: 1.4vw;
-    }
-
-    .panel p {
-        font-size: 1.1vw;
+        margin-top: -48%!important;
     }
     
     .footer_round {
         margin-bottom: 10px;
-    }
-}
-
-@media screen and (max-width: 900px){
-    .comic-images-section {
-        padding: 40px 0 60px 0;
-    }
-    .section-qa {
-        margin-top: -52%!important;
-    }
-
-    .footer-font {
-        font-size: 1.4vw;
-    }
-
-    .panel p {
-        font-size: 1.3vw;
     }
     
     .footer_round {
@@ -603,39 +495,204 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 830px){
+    .section-qa {
+        margin-top: -48%!important;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .badboyz, .our-story-back, .roadmap-image, .roadmap-front-image,
+    .join-us-img, .our-team-back, .footer-back {
+        display: none;
+    }
+    .badboyz-mobile, .our-story-back-mobile, .roadmap-image-mobile, .roadmap-front-image-mobile,
+    .our-team-back-mobile, .join-us-img-mobile, .footer-back-mobile {
+        display: block;
+    }
+    .roadmap-image-mobile {
+        position: absolute;
+        z-index: -5;
+    }
+    .badboy {
+        position: relative;
+    }
+    .landing-video {
+        position: absolute;
+        top: 32%;
+    }
+    .team-block {
+        top: 20%;
+    }
+    .team-caption {
+        font-size: 2.5vw;
+    }
+    .member {
+        width: 80%;
+    }
+
+    .center-member {
+        width: 40%;
+    }
+    
+    .co-founder1 {
+        margin-left: 12%;
+    }
+    
+    .co-founder2 {
+        margin-right: 12%;
+    }
+    .badboyz-mobile {
+        margin-top: -10px;
+    }
+    
+    .comic-item-image {
+        width: 100%;
+    }
+    
+    .bat-boy {
+        transform: scale(1.2);
+        margin-left: 15%;
+    }
+    .developer {
+        width: 100%;
+    }
+    .spider-boy {
+        margin-top: -100%;
+        width: 120%;
+        margin-left: 20%;
+    }
+
+    .coming-soon {
+        margin-top: -100%;
+        width: 120%;
+        margin-left: -40%;
+    }
+
+    .bat-boy {
+        margin-left: -28%;
+        margin-top: 60%;
+        width: 160%;
+    }
+   
+    .origin-story-title {
+        width: 100%;
+        opacity: 0;
+    }
+    .roadmap-title {
+        font-size: 4vw;
+    }
+    .roadmap-content {
+        font-size: 3vw;
+    }
+    .comic-images-section {
+        padding: 20px 0 140px 0;
+    }
+    .origin-story {
+        background: url(../images/mobile/originstory.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .percent25-text {
+        top: 17%;
+        width: 56%;
+        left: 30%;
+    }
+    .percent50-text {
+        top: 38.5%;
+        width: 56%;
+        left: 30%;
+    }
+    .percent75-text {
+        top: 60%;
+        width: 56%;
+        left: 30%;
+    }
+    .percent100-text {
+        top: 81.5%;
+        width: 56%;
+        left: 30%;
+    }
+    .join-us-text {
+        width: 75%;
+        top: 66%;
+        font-size: 3.5vw;
+        right: 12.5%;
+    }
+    .join-us-text-block {
+        padding: 2%;
+        background-color: transparent;
+        border: none!important;
+    }
+    .fly {
+        width: 15%;
+        left: 2%;
+    }
+    .wham {
+        left: 1%;
+        width: 20%;
+        top: 25%;
+    }
+    .bang {
+        left: 1%;
+        width: 25%;
+        top: 46%;
+    }
+    .pow {
+        left: 1%;
+        width: 22%;
+        top: 69%;
+    }
+    .kaboom {
+        left: 1%;
+        width: 22%;
+        top: 89.8%;
+    }
+  
+    .section-qa {
+        padding-top: 20%!important;
+        padding-bottom: 5%;
+        margin-top: -120%!important;
+    }
+    .footer_round {
+        margin-bottom: 20px!important;
+    }
+    .special-footer-round {
+        margin-top: 0!important;
+    }
+    .footer-img {
+        top: 168%;
+        z-index: -1;
+    }
     .footer-back {
         display: none;
     }
-    .faq-section {
-        background: url(../images/faq.jpg) no-repeat;
-        background-size: 100% 100%;
-    }
+    
     .footer-font {
-        font-size: 2vw;
+        font-size: 3vw!important;
     }
     .panel p {
-        font-size: 1.6vw;
-    }
-    .section-qa {
-        margin-top: 0!important;
-        padding-top: 25%!important;
-        padding-bottom: 5%;
+        font-size: 2.5vw!important;
     }
     .footer-section {
         margin-top: -2%;
     }
+    .story-block  {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+@media (min-width: 768px) {
+    .story-item {
+        flex: 0 0 auto;
+        width: 33.333333%!important;
+    }
 }
 
 @media screen and (max-width: 680px){
-    /* .percent75-text {
-        top: 53.8%;
-    }
-    .percent100-text {
-        top: 71.2%;
-    } */
     .section-qa {
-        padding-top: 28%!important;
+        padding: 5px 25px 0 25px;
+        padding-top: 17%!important;
     }
     .footer-font {
         font-size: 3vw;
@@ -646,14 +703,12 @@ button:focus {
 }
 
 @media(max-width: 576px) {
-    .section-qa {
-        padding-top: 33%!important;
-        padding: 50px 50px 0 50px;
+    .team-item {
+        width: 50%!important;
     }
-    
-    /* .fly {
-        left: 43%;
-    } */
+    .section-qa {
+        padding-top: 18%!important;
+    }
     .pc {
         display: none;
     }
@@ -677,39 +732,28 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 570px){
-    .percent25-text {
-        top: 17.1%;
-        left: 15%;
-    }
-    .percent50-text {
-        top: 36.2%;
-    }
-    .percent75-text {
-        top: 54%;
-    }
-    .percent100-text {
-        top: 72.5%;
-    }
-    .comic-images-section {
-        padding: 20px 0 40px 0;
+@media (min-width: 100px) {
+    .story-item {
+        flex: 0 0 auto;
+        width: 50%;
     }
 }
 
-@media screen and (max-width: 460px){
-    .section-qa {
-        padding-top: 40%!important;
-    }
-    .percent25-text {
-        top: 17.5%;
-    }
-    .percent50-text {
-        top: 35.5%;
-    }
-    .percent75-text {
-        top: 53.5%;
-    }
-    .percent100-text {
-        top: 71.5%;
+@media screen and (max-width: 570px){
+    .comic-images-section {
+        padding: 20px 0 100px 0;
     }
 }
+
+@media screen and (max-width: 518px){
+    .footer_round {
+        margin-bottom: 0px!important;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .section-qa {
+        padding-top: 12%!important;
+    }
+}
+

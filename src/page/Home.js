@@ -227,33 +227,55 @@ function Home() {
 
   return (
     <div>
-        <div className="trailer-video">
+        {/* <div className="trailer-video">
             <video className="width-100 landing-video" src="./assets/images/video01.mp4" autoPlay muted loop></video>
-            {/* <img className="width-100" src="./assets/images/trailer_video.jpg"/> */}
-        </div>
+        </div> */}
         <div className="badboy">
+            <video className="width-100 landing-video" src="./assets/images/video01.mp4" autoPlay muted loop></video>
             <img className="width-100 badboyz" src="./assets/images/badboyz.jpg"/>
+            <img className="width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.png"/>     
         </div>
         <div className="our-story">
             <img className="width-100 our-story-back" src="./assets/images/our-story.png"/>
-            <div className="story-block">
-                <div className="left-block">
+            <img className="width-100 our-story-back-mobile" src="./assets/images/mobile/our-story-background.png"/>
+            <div className="story-block row">
+                <div className="left-block col-md-4 story-item col-sm-6 px-0">
                     <img className="story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
+                </div>
+                <div className="medium-block col-md-4 story-item col-sm-6 px-0">
+                    <img className="story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
+                </div>
+                <div className="right-block col-md-4 story-item col-sm-6 px-0">
+                    <img className="story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
+                </div>
+                <div className="left-block col-md-4 story-item col-sm-6 px-0">
                     <img className="story-image story-4" ref={storyObj4} src="./assets/images/story4.png"/>
                 </div>
-                <div className="medium-block">
-                    <img className="story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
+                <div className="medium-block col-md-4 story-item col-sm-6 px-0">
                     <img className="story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
                 </div>
-                <div className="right-block">
-                    <img className="story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
+                <div className="right-block col-md-4 story-item col-sm-6 px-0">
                     <img className="story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
                 </div>
             </div>
+            {/* <div className="story-block-mobile">
+                <div className="left-block">
+                    <img className="story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
+                    <img className="story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
+                    <img className="story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
+                </div>
+                <div className="right-block">
+                    <img className="story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
+                    <img className="story-image story-4" ref={storyObj3} src="./assets/images/story4.png"/>
+                    <img className="story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
+                </div>
+            </div> */}
         </div>
         <div className="road-map">
             <img className="width-100 roadmap-image" src="./assets/images/WEB5.badboyz-Backlayer.png"/>
+            <img className="width-100 roadmap-image-mobile" src="./assets/images/mobile/roadmap-bottom-layer.png"/>
             <img className="width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
+            <img className="width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap-top-layer.png"/>
             <div className="text-center">
                 <img className="fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
                 <img className="wham" ref={whamObj} src="./assets/images/wham.png"/>
@@ -327,21 +349,10 @@ function Home() {
                     </a>
                 </div>
             </div>
-            {/* <div className="gallery">
-                    <div className="slider__item">
-                    <img src="./assets/images/SpiderBoy.png" />
-                    </div>
-                    <div className="slider__item">
-                    <img src="./assets/images/BatBoy.png" /> 
-                    </div>
-                    <div className="slider__item">
-                    <img src="./assets/images/SpiderBoy.png" />
-                    </div>
-                <div className="gallery-controls"></div>
-            </div> */}
         </div>
         <div className="join-us">
             <img className="width-100 join-us-img" src="./assets/images/joinDiscord.png"/>
+            <img className="width-100 join-us-img-mobile" src="./assets/images/mobile/join-us.png"/>
             <div className="join-us-text comic-font text-center">
                 <div className="join-us-text-block">
                     Get together with likeminded Badboyz and shower other projects with warm, compassionate love!<br/>
@@ -354,7 +365,45 @@ function Home() {
         </div>
         <div className="our-team">
             <img className="width-100 our-team-back" src="./assets/images/our-team.png"/>
-            <div className="our-team-content">
+            <img className="width-100 our-team-back-mobile" src="./assets/images/mobile/our-team.png"/>
+            <div className="row text-center team-block">
+                <div className="col-md-6 col-sm-6 team-item">
+                    <img className="member co-founder1" src="./assets/images/pp.jpg"/>
+                    <div className="team-caption co-founder1">
+                        <div>CO-FOUNDER</div>
+                        <div>NAME</div>
+                    </div>
+                </div>
+                <div className="col-md-6 col-sm-6 team-item">
+                    <img className="member co-founder2" src="./assets/images/pp.jpg"/>
+                    <div className="team-caption co-founder2">
+                        <div>CO-FOUNDER</div>
+                        <div>NAME</div>
+                    </div>
+                </div>
+                <div className="col-md-4 col-sm-12">
+                    <img className="member-second-row member center-member" src="./assets/images/pp.jpg"/>
+                    <div className="team-caption">
+                        <div>DEVELOPER</div>
+                        <div>NAME</div>
+                    </div>
+                </div>
+                <div className="col-md-4 col-sm-6 team-item">
+                    <img className="member-second-row member" src="./assets/images/pp.jpg"/>
+                    <div className="team-caption">
+                        <div>MARKETER</div>
+                        <div>NAME</div>
+                    </div>
+                </div>
+                <div className="col-md-4 col-sm-6 team-item">
+                    <img className="member-second-row member" src="./assets/images/pp.jpg"/>
+                    <div className="team-caption">
+                        <div>ARTIST</div>
+                        <div>NAME</div>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="our-team-content">
                 <div className="team-block first-team-row">
                     <div className="text-center">
                         <img className="member co-founder1" src="./assets/images/pp.jpg"/>
@@ -372,7 +421,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="team-block">
-                    <div className="text-center">
+                    <div className="text-center developer">
                         <img className="member-second-row member" src="./assets/images/pp.jpg"/>
                         <div className="team-caption">
                             <div>DEVELOPER</div>
@@ -394,15 +443,17 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <img className="width-100 footer-img" src="./assets/images/footer.jpg"/>
         </div>
         <div className="faq-section">
             <img className="width-100 footer-back" src="./assets/images/faq.jpg"/>
-            <section className="rubik-font" id="accordionExample">
+            <img className="width-100 footer-back-mobile" src="./assets/images/mobile/faq.png"/>
+            <section className="rubik-font accordion-section" id="accordionExample">
                 <div className="row section-qa">
                     <div className="col-md-6 col-sm-12">
-                        <div className="mt-4 accordion-container footer_round">
-                            <div className="accordion py-2" id="headingOne">
+                        <div className="mt-3 accordion-container footer_round">
+                            <div className="accordion py-1" id="headingOne">
                                 <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                     Who are the BadBoyz?
                                 </h2>
@@ -413,21 +464,21 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-4 accordion-container footer_round">
-                            <div className="accordion py-2" id="headingTwo">
+                        <div className="mt-3 accordion-container footer_round">
+                            <div className="accordion py-1" id="headingTwo">
                                 <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Where will the minting take place?
                                 </h2>
                             </div>
                             <div id="collapseTwo" className="accordion-collapse collapse panel" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <p>
-                                    The minting will take place on our official website: https://badboyz.io/. 
+                                    The minting will take place on our official website: https://bboyz.ioad/. 
                                     Keep an eye at the announcement channels in the official Discord for the exact link and beware of DM scammers.
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-4 accordion-container footer_round">
-                            <div className="accordion py-2" id="headingThree">
+                        <div className="mt-3 accordion-container footer_round">
+                            <div className="accordion py-1" id="headingThree">
                                 <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     What will be the mint price?
                                 </h2>
@@ -440,8 +491,8 @@ function Home() {
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-12">
-                        <div className="mt-4 accordion-container footer_round">
-                            <div className="accordion py-2" id="headingFour">
+                        <div className="mt-3 accordion-container footer_round special-footer-round">
+                            <div className="accordion py-1" id="headingFour">
                                 <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     When is the drop?
                                 </h2>
@@ -452,8 +503,8 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-4 accordion-container footer_round">
-                            <div className="accordion py-2" id="headingFive">
+                        <div className="mt-3 accordion-container footer_round">
+                            <div className="accordion py-1" id="headingFive">
                                 <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                     How can I get whitelisted?
                                 </h2>
@@ -464,8 +515,8 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="mt-4 accordion-container footer_round">
-                            <div className="accordion py-2" id="headingSix">
+                        <div className="mt-3 accordion-container footer_round">
+                            <div className="accordion py-1" id="headingSix">
                                 <h2 className="footer-font" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                     What happens after Roadmap completion?
                                 </h2>
@@ -480,9 +531,9 @@ function Home() {
                 </div>
             </section>
         </div>
-        <div className="footer-section">
-            <img className="width-100" src="./assets/images/footer.jpg"/>
-        </div>
+        {/* <div className="footer-section">
+            <img className="width-100 footer-img" src="./assets/images/footer.jpg"/>
+        </div> */}
     </div>
   );
 }
