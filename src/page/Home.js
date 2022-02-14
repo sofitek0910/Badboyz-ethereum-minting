@@ -277,7 +277,7 @@ function Home() {
             </div>
         </nav>
         <div className="badboy">    
-            <video className="width-100 landing-video" src="./assets/images/video01.mp4" autoPlay muted loop></video>
+            <video className="width-100 landing-video" src="https://youtu.be/Robs__2yu9M" autoPlay muted loop></video>
             <img className="width-100 badboyz" src="./assets/images/badboyz.jpg"/>
             <img className="width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.png"/>  
             {blockchain.account == null && blockchain.account == undefined ? 
