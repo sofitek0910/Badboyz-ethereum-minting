@@ -1,6 +1,7 @@
 const initialState = {
   loading: false,
   totalSupply: 0,
+  presaleStatus: false,
   cost: 0,
   error: false,
   errorMsg: "",
@@ -20,7 +21,7 @@ const dataReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         totalSupply: action.payload.totalSupply,
-        // cost: action.payload.cost,
+        presaleStatus: action.payload.presaleStatus,
         error: false,
         errorMsg: "",
       };

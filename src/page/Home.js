@@ -45,30 +45,59 @@ function Home() {
     let totalGasLimit = String(gasLimit * mintAmount);
     console.log("Cost: ", totalCostWei);
     console.log("Gas limit: ", totalGasLimit);
-    console.log("smartcontract--->", blockchain.smartContract)
+    console.log("smartcontract--->", blockchain.smartContract);
+    console.log("presale status: ", data.presaleStatus);
     // swal(`Minting your ${CONFIG.NFT_NAME}...`, "", "info");
     setClaimingNft(true);
-    blockchain.smartContract.methods
-      .publicSaleMint()
-      .send({
-        gasLimit: String(totalGasLimit),
-        to: CONFIG.CONTRACT_ADDRESS,
-        from: blockchain.account,
-        value: totalCostWei,
-      })
-      .once("error", (err) => {
-        console.log(err);
-        swal("Sorry, something went wrong please try again later.", "", "error");
-        setClaimingNft(false);
-      })
-      .then((receipt) => {
-        console.log(receipt);
-        swal(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`, "", "success"
-        );
-        setClaimingNft(false);
-        dispatch(fetchData(blockchain.account));
-      });
+
+    if (!data.presaleStatus && !data.loading) {
+        console.log("public============>")
+        blockchain.smartContract.methods
+        .mintBadBoyz(mintAmount)
+        .send({
+          gasLimit: String(totalGasLimit),
+          to: CONFIG.CONTRACT_ADDRESS,
+          from: blockchain.account,
+          value: totalCostWei,
+        })
+        .once("error", (err) => {
+          console.log(err);
+          swal("Sorry, something went wrong please try again later.", "", "error");
+          setClaimingNft(false);
+        })
+        .then((receipt) => {
+            console.log("receipt", receipt.events.BadBoyzMinted.returnValues);
+          swal(
+            `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`, "", "success"
+          );
+          setClaimingNft(false);
+          dispatch(fetchData(blockchain.account));
+        });
+    } else {
+        console.log("presale===========>>>>>>>>>>");
+        blockchain.smartContract.methods
+        .presaleBadBoyz(mintAmount)
+        .send({
+          gasLimit: String(totalGasLimit),
+          to: CONFIG.CONTRACT_ADDRESS,
+          from: blockchain.account,
+          value: totalCostWei,
+        })
+        .once("error", (err) => {
+          console.log(err);
+          swal("Sorry, something went wrong please try again later.", "", "error");
+          setClaimingNft(false);
+        })
+        .then((receipt) => {
+            console.log("receipt", receipt.events.BadBoyzMinted.returnValues);
+          swal(
+            `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`, "", "success"
+          );
+          setClaimingNft(false);
+          dispatch(fetchData(blockchain.account));
+        })
+        .catch(revertReason => console.log("reverreason===>",{revertReason}));
+    }
   };
 
   const decrementMintAmount = () => {
@@ -89,9 +118,8 @@ function Home() {
 
   const getData = () => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchData(blockchain.account));
+        dispatch(fetchData(blockchain.account));  
     }
-    console.log("account===>", blockchain.account)
   };
 
   const getConfig = async () => {
@@ -116,6 +144,7 @@ function Home() {
   const powObj = useRef();
   const kaboomObj = useRef();
   const originObj = useRef();
+  const navObj = useRef();
   const storyObj1 = useRef();
   const storyObj2 = useRef();
   const storyObj3 = useRef();
@@ -137,10 +166,21 @@ function Home() {
     var storyObj5Dimension = storyObj5.current.getBoundingClientRect();
     var storyObj6Dimension = storyObj6.current.getBoundingClientRect();
 
-    if ( flyObjDimension.top+flyObj.current.height/2 <= window.innerHeight/2 ) {
-        console.log("center position")
+    console.log("scroll", window.scrollY)
+    if (window.scrollY>10){
+        navObj.current.style.setProperty("animation-name", "fadeOut");
+        navObj.current.style.setProperty("animation-duration", "1.5s");
+        navObj.current.style.setProperty("animation-iteration-count", "1");
+        navObj.current.style.setProperty("animation-fill-mode", "forwards");
+    } else {
+        navObj.current.style.setProperty("animation-name", "fadeIn");
+        navObj.current.style.setProperty("animation-duration", "1.5s");
+        navObj.current.style.setProperty("animation-iteration-count", "1");
+        navObj.current.style.setProperty("animation-fill-mode", "forwards");
     }
-    console.log("wham center position", whamObjDimension.top+whamObj.current.height/2, window.innerHeight/2+50)
+    
+
+
     if ( whamObjDimension.top+whamObj.current.height/2 <= flyObjDimension.top+flyObj.current.height/2 ) {
         whamObj.current.style.setProperty("z-index", "-2")
     } else {
@@ -208,12 +248,7 @@ function Home() {
         storyObj6.current.style.setProperty("animation-delay", "5.5s");
         storyObj6.current.style.setProperty("animation-iteration-count", "1");
         storyObj6.current.style.setProperty("animation-fill-mode", "forwards");
-    } 
-
-    // if ( storyObj4Dimension.top <= window.innerHeight && storyObj4Dimension.bottom >= 150 ) {
-       
-    // } 
-    
+    }  
   }
 
   useEffect(() => {
@@ -230,10 +265,52 @@ function Home() {
         {/* <div className="trailer-video">
             <video className="width-100 landing-video" src="./assets/images/video01.mp4" autoPlay muted loop></video>
         </div> */}
-        <div className="badboy">
+        <nav className="navbar" ref={navObj}>
+            <div className="container">
+                <img className="logo-image" src="./assets/images/badboyz.png"/>
+                <div className="social-links">
+                    <a className="social-item" href="https://discord.gg/badboyz" target="_blank"><i className="fab fa-youtube"></i></a>
+                    <a className="social-item" href="https://www.instagram.com/thebadboyznft" target="_blank"><i className="fab fa-twitter"></i></a>
+                    <a className="social-item" href="" target="_blank"><i className="fab fa-instagram"></i></a>
+                    <a className="social-item" href="" target="_blank"><i className="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div className="badboy">    
             <video className="width-100 landing-video" src="./assets/images/video01.mp4" autoPlay muted loop></video>
             <img className="width-100 badboyz" src="./assets/images/badboyz.jpg"/>
-            <img className="width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.png"/>     
+            <img className="width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.png"/>  
+            {blockchain.account == null && blockchain.account == undefined ? 
+                <button className="connect-button comic-font btn btn-white no-display"
+                    onClick={(e) => {
+                    e.preventDefault();
+                    dispatch(connect());
+                    getData();
+                    }
+                }
+                >
+                CONNECT
+                </button>:
+                <span className="connect-button comic-font btn btn-white">
+                {String(blockchain.account).substring(0, 4) +
+                    "..." +
+                    String(blockchain.account).substring(38)
+                }
+                </span>
+            }  
+            <div className="col-md-3 col-sm-12 text-center">
+                <button 
+                    className="mint-btn comic-font btn btn btn-white no-display"
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        claimNFTs();
+                        getData();
+                    }}
+                >
+                {claimingNft ? "MINTING" : "MINT"}
+                </button>
+            </div> 
         </div>
         <div className="our-story">
             <img className="width-100 our-story-back" src="./assets/images/our-story.png"/>
@@ -403,48 +480,20 @@ function Home() {
                     </div>
                 </div>
             </div>
-            {/* <div className="our-team-content">
-                <div className="team-block first-team-row">
-                    <div className="text-center">
-                        <img className="member co-founder1" src="./assets/images/pp.jpg"/>
-                        <div className="team-caption co-founder1">
-                            <div>CO-FOUNDER</div>
-                            <div>NAME</div>
-                        </div>
-                    </div>
-                    <div className="text-center">
-                        <img className="member co-founder2" src="./assets/images/pp.jpg"/>
-                        <div className="team-caption co-founder2">
-                            <div>CO-FOUNDER</div>
-                            <div>NAME</div>
-                        </div>
-                    </div>
-                </div>
-                <div className="team-block">
-                    <div className="text-center developer">
-                        <img className="member-second-row member" src="./assets/images/pp.jpg"/>
-                        <div className="team-caption">
-                            <div>DEVELOPER</div>
-                            <div>NAME</div>
-                        </div>
-                    </div>
-                    <div className="text-center">
-                        <img className="member-second-row member" src="./assets/images/pp.jpg"/>
-                        <div className="team-caption">
-                            <div>MARKETER</div>
-                            <div>NAME</div>
-                        </div>
-                    </div>
-                    <div className="text-center">
-                        <img className="member-second-row member" src="./assets/images/pp.jpg"/>
-                        <div className="team-caption">
-                            <div>ARTIST</div>
-                            <div>NAME</div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
             <img className="width-100 footer-img" src="./assets/images/footer.jpg"/>
+            <div className="footer-logo-section">
+                    <div>
+                        <a className="social-text" href="https://discord.gg/badboyz" target="_blank">Discord</a>
+                    </div>
+                    <div>
+                        <img className="logo-image footer-logo-image" src="./assets/images/badboyz.png"/>
+                    </div>
+                    <div>
+                        <a className="social-text mx-2" href="https://www.instagram.com/thebadboyznft" target="_blank">Instagram</a>
+                        <a className="social-text mx-2" href="https://www.twitter.com/thebadboyznft" target="_blank">Twitter</a>
+                        <a className="social-text mx-2" href="" target="_blank">Youtube</a>
+                    </div>
+                </div>
         </div>
         <div className="faq-section">
             <img className="width-100 footer-back" src="./assets/images/faq.jpg"/>
@@ -529,7 +578,10 @@ function Home() {
                         </div>
                     </div>
                 </div>
+                
             </section>
+
+            
         </div>
         {/* <div className="footer-section">
             <img className="width-100 footer-img" src="./assets/images/footer.jpg"/>

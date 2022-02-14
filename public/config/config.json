@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x75d116a2f8fE62c28cB36Dc4951f649638262D88",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x75d116a2f8fE62c28cB36Dc4951f649638262D88",
+  "CONTRACT_ADDRESS": "0xc7CB04fe9b7B63bF26A83af72aBCc47F94e940bb",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xc7CB04fe9b7B63bF26A83af72aBCc47F94e940bb",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
     "ID": 4
   },
-  "NFT_NAME": "DEAD PUNKZ",
-  "SYMBOL": "DP",
+  "NFT_NAME": "Bad Boyz",
+  "SYMBOL": "BB",
   "MAX_SUPPLY": 10000,
-  "WEI_COST": 100000000000000000,
+  "WEI_COST": 1900000000000000,
   "DISPLAY_COST": 0.005,
   "GAS_LIMIT": 3000000,
   "MARKETPLACE": "Opensea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/dead-punkz-society",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/Bac-Boyz-Society",
   "SHOW_BACKGROUND": true
 }

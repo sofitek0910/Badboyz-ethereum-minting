@@ -49,6 +49,10 @@
     src: url('../fonts/LDFComicSansLight.ttf');
 }
 
+.no-display {
+    display: none;
+}
+
 .comic-light-font {
     font-family: 'comic-light';
 }
@@ -58,9 +62,78 @@
     display: none;
 }
 
+.navbar {
+    width: 100%;
+    background-color: #071019a9;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.social-links {
+    float: right;
+}
+
+.footer-logo-section {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #071019;
+    position: absolute;
+    top: 300%;
+}
+
+.footer-logo-image {
+    width: 170px!important;
+    margin-left: 45%;
+}
+
+.social-text {
+    line-height: 2.2;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.social-item {
+    font-size: 24px;
+    margin-right: 10px;
+    float: right;
+    color: #fff;
+}
+
+.logo-image {
+    width: 150px;
+}
+
 /*  my new css */
 .width-100 {
     width: 100%;
+}
+
+.connect-button {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+.mint-btn {
+    position: absolute;
+    font-size: 28px;
+    border-radius: 50px;
+    padding: 10px 30px;
+    top: 25%;
+    left: 46%;
 }
 
 .landing-video {
@@ -98,6 +171,26 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
 
@@ -510,6 +603,15 @@
     .our-team-back-mobile, .join-us-img-mobile, .footer-back-mobile {
         display: block;
     }
+    .footer-logo-section {
+        top: 199%;
+    }
+    .footer-logo-image {
+        margin-left: 0;
+    }
+    .social-text {
+        display: none;
+    }
     .roadmap-image-mobile {
         position: absolute;
         z-index: -5;
@@ -518,8 +620,11 @@
         position: relative;
     }
     .landing-video {
+        width: 80%;
         position: absolute;
-        top: 32%;
+        left: 10%;
+        top: 38%;
+        border: 6px solid #000;
     }
     .team-block {
         top: 20%;
