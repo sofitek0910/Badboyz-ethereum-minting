@@ -267,7 +267,7 @@ function Home() {
         </div> */}
         <nav className="navbar" ref={navObj}>
             <div className="container">
-                <img className="logo-image" src="./assets/images/badboyz.png"/>
+                <img className="logo-image" src="./assets/images/Badboyz.png"/>
                 <div className="social-links">
                     <a className="social-item" href="https://discord.gg/badboyz" target="_blank"><i className="fab fa-youtube"></i></a>
                     <a className="social-item" href="https://www.instagram.com/thebadboyznft" target="_blank"><i className="fab fa-twitter"></i></a>
