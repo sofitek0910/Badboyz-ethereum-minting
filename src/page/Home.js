@@ -267,17 +267,22 @@ function Home() {
         </div> */}
         <nav className="navbar" ref={navObj}>
             <div className="container">
-                <img className="logo-image" src="./assets/images/Badboyz.png"/>
+                <img className="logo-image" src="./assets/images/logo.png"/>
                 <div className="social-links">
-                    <a className="social-item" href="https://discord.gg/badboyz" target="_blank"><i className="fab fa-youtube"></i></a>
-                    <a className="social-item" href="https://www.instagram.com/thebadboyznft" target="_blank"><i className="fab fa-twitter"></i></a>
-                    <a className="social-item" href="" target="_blank"><i className="fab fa-instagram"></i></a>
-                    <a className="social-item" href="" target="_blank"><i className="fab fa-discord"></i></a>
+                    <a className="social-item" href="https://www.youtube.com/channel/UCIsge5kzES4PcpRlsTiTvIA" target="_blank"><i className="fab fa-youtube"></i></a>
+                    <a className="social-item" href="https://www.twitter.com/thebadboyznft" target="_blank"><i className="fab fa-twitter"></i></a>
+                    <a className="social-item" href="https://www.instagram.com/thebadboyznft" target="_blank"><i className="fab fa-instagram"></i></a>
+                    <a className="social-item" href="https://discord.gg/badboyz" target="_blank"><i className="fab fa-discord"></i></a>
                 </div>
             </div>
         </nav>
-        <div className="badboy">    
-            <video className="width-100 landing-video" src="https://youtu.be/Robs__2yu9M" autoPlay muted loop></video>
+        <div className="badboy">  
+            <div className="mobile-youtube-block">
+                <div className="youtube-container">
+                    <iframe className="width-100 landing-video" frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/Robs__2yu9M"> 
+                    </iframe>
+                </div>
+            </div>  
             <img className="width-100 badboyz" src="./assets/images/badboyz.jpg"/>
             <img className="width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.png"/>  
             {blockchain.account == null && blockchain.account == undefined ? 
@@ -313,8 +318,8 @@ function Home() {
             </div> 
         </div>
         <div className="our-story">
-            <img className="width-100 our-story-back" src="./assets/images/our-story.png"/>
-            <img className="width-100 our-story-back-mobile" src="./assets/images/mobile/our-story-background.png"/>
+            <img className="width-100 our-story-back" src="./assets/images/our_story.png"/>
+            <img className="width-100 our-story-back-mobile" src="./assets/images/mobile/our_story_background.png"/>
             <div className="story-block row">
                 <div className="left-block col-md-4 story-item col-sm-6 px-0">
                     <img className="story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
@@ -352,7 +357,7 @@ function Home() {
             <img className="width-100 roadmap-image" src="./assets/images/WEB5.badboyz-Backlayer.png"/>
             <img className="width-100 roadmap-image-mobile" src="./assets/images/mobile/roadmap-bottom-layer.png"/>
             <img className="width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
-            <img className="width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap-top-layer.png"/>
+            <img className="width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap_top_layer.png"/>
             <div className="text-center">
                 <img className="fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
                 <img className="wham" ref={whamObj} src="./assets/images/wham.png"/>
@@ -410,70 +415,70 @@ function Home() {
             </div>
             <div className="comic-images-section">
                 <div className="comic-item">
-                    <a href="./assets/images/BatBoy.png">
+                    <a href="./assets/images/SpiderBoy.png" data-fancybox>
                         <img className="spider-boy comic-item-image" src="./assets/images/SpiderBoy.png" />
                     </a>
                 </div>
                 <div className="comic-item">
-                    <a href="./assets/images/BatBoy.png">
+                    <a href="./assets/images/BatBoy.png" data-fancybox>
                         <img className="bat-boy comic-item-image" src="./assets/images/BatBoy.png" /> 
                     </a>
                     
                 </div>
                 <div className="comic-item">
-                    <a href="./assets/images/ComingSoon.png">
+                    <a href="./assets/images/ComingSoon.png" data-fancybox>
                         <img className="coming-soon comic-item-image" src="./assets/images/ComingSoon.png" />
                     </a>
                 </div>
             </div>
         </div>
         <div className="join-us">
-            <img className="width-100 join-us-img" src="./assets/images/joinDiscord.png"/>
-            <img className="width-100 join-us-img-mobile" src="./assets/images/mobile/join-us.png"/>
+            <img className="width-100 join-us-img" src="./assets/images/join_discord.jpg"/>
+            <img className="width-100 join-us-img-mobile" src="./assets/images/join_us.jpg"/>
             <div className="join-us-text comic-font text-center">
                 <div className="join-us-text-block">
                     Get together with likeminded Badboyz and shower other projects with warm, compassionate love!<br/>
                     Come join the BadBoyz adventure in the official Discord server!
                 </div>
                 <div className="text-box text-center comic-caption">
-                    <a href="#" className="btn btn-white btn-animate">JOIN DISCORD</a>
+                    <a href="https://discord.gg/badboyz" target="_blank" className="btn btn-white btn-animate">JOIN DISCORD</a>
                 </div>
             </div>
         </div>
         <div className="our-team">
-            <img className="width-100 our-team-back" src="./assets/images/our-team.png"/>
-            <img className="width-100 our-team-back-mobile" src="./assets/images/mobile/our-team.png"/>
+            <img className="width-100 our-team-back" src="./assets/images/our_team.png"/>
+            <img className="width-100 our-team-back-mobile" src="./assets/images/mobile/our_team.png"/>
             <div className="row text-center team-block">
                 <div className="col-md-6 col-sm-6 team-item">
-                    <img className="member co-founder1" src="./assets/images/pp.jpg"/>
+                    <img className="member co-founder1" src="./assets/images/team1.png"/>
                     <div className="team-caption co-founder1">
                         <div>CO-FOUNDER</div>
                         <div>NAME</div>
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-6 team-item">
-                    <img className="member co-founder2" src="./assets/images/pp.jpg"/>
+                    <img className="member co-founder2" src="./assets/images/team2.png"/>
                     <div className="team-caption co-founder2">
                         <div>CO-FOUNDER</div>
                         <div>NAME</div>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-12">
-                    <img className="member-second-row member center-member" src="./assets/images/pp.jpg"/>
+                    <img className="member-second-row member center-member" src="./assets/images/team3.png"/>
                     <div className="team-caption">
                         <div>DEVELOPER</div>
                         <div>NAME</div>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-6 team-item">
-                    <img className="member-second-row member" src="./assets/images/pp.jpg"/>
+                    <img className="member-second-row member" src="./assets/images/team4.png"/>
                     <div className="team-caption">
                         <div>MARKETER</div>
                         <div>NAME</div>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-6 team-item">
-                    <img className="member-second-row member" src="./assets/images/pp.jpg"/>
+                    <img className="member-second-row member" src="./assets/images/team5.png"/>
                     <div className="team-caption">
                         <div>ARTIST</div>
                         <div>NAME</div>
@@ -486,18 +491,18 @@ function Home() {
                         <a className="social-text" href="https://discord.gg/badboyz" target="_blank">Discord</a>
                     </div>
                     <div>
-                        <img className="logo-image footer-logo-image" src="./assets/images/badboyz.png"/>
+                        <img className="logo-image footer-logo-image" src="./assets/images/logo.png"/>
                     </div>
                     <div>
                         <a className="social-text mx-2" href="https://www.instagram.com/thebadboyznft" target="_blank">Instagram</a>
                         <a className="social-text mx-2" href="https://www.twitter.com/thebadboyznft" target="_blank">Twitter</a>
-                        <a className="social-text mx-2" href="" target="_blank">Youtube</a>
+                        <a className="social-text mx-2" href="https://www.youtube.com/channel/UCIsge5kzES4PcpRlsTiTvIA" target="_blank">Youtube</a>
                     </div>
                 </div>
         </div>
         <div className="faq-section">
             <img className="width-100 footer-back" src="./assets/images/faq.jpg"/>
-            <img className="width-100 footer-back-mobile" src="./assets/images/mobile/faq.png"/>
+            <img className="width-100 footer-back-mobile" src="./assets/images/mobile/faq.jpg"/>
             <section className="rubik-font accordion-section" id="accordionExample">
                 <div className="row section-qa">
                     <div className="col-md-6 col-sm-12">
