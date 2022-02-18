@@ -145,6 +145,7 @@ function Home() {
   const kaboomObj = useRef();
   const originObj = useRef();
   const navObj = useRef();
+  const roadmapObj = useRef();
   const storyObj1 = useRef();
   const storyObj2 = useRef();
   const storyObj3 = useRef();
@@ -160,6 +161,7 @@ function Home() {
     var kaboomObjDimension = kaboomObj.current.getBoundingClientRect();
     var originObjDimension = originObj.current.getBoundingClientRect();
     var storyObj1Dimension = storyObj1.current.getBoundingClientRect();
+    var roadmapObjDimension = roadmapObj.current.getBoundingClientRect();
     var storyObj2Dimension = storyObj2.current.getBoundingClientRect();
     var storyObj3Dimension = storyObj3.current.getBoundingClientRect();
     var storyObj4Dimension = storyObj4.current.getBoundingClientRect();
@@ -179,7 +181,11 @@ function Home() {
         navObj.current.style.setProperty("animation-fill-mode", "forwards");
     }
     
-
+    if(roadmapObjDimension.top < window.innerHeight && roadmapObjDimension.bottom >= 0) {
+		flyObj.current.style.setProperty("display", "block");
+	} else {
+        flyObj.current.style.setProperty("display", "none");
+    }
 
     if ( whamObjDimension.top+whamObj.current.height/2 <= flyObjDimension.top+flyObj.current.height/2 ) {
         whamObj.current.style.setProperty("z-index", "-2")
@@ -255,19 +261,26 @@ function Home() {
     getConfig();
   }, []);
 
-
   useEffect(() => {
     getData();
   }, [blockchain.account]);
 
   return (
     <div>
-        {/* <div className="trailer-video">
-            <video className="width-100 landing-video" src="./assets/images/video01.mp4" autoPlay muted loop></video>
-        </div> */}
+        <div className="preloader">
+            <div className="layer"></div>
+            <div className="inner">
+				<figure>
+                    <video className="width-100" src="./assets/images/trailer.webm" type="video/webm" muted autoPlay loop>
+                        {/* <source src="./assets/images/trailer.webm" type="video/webm"></source> */}
+                    </video>
+				</figure> 
+                <span>Loading graphics..<br/> Please have patience</span>
+			</div>
+        </div>
         <nav className="navbar" ref={navObj}>
             <div className="container">
-                <img className="logo-image" src="./assets/images/logo.png"/>
+                <img className="lazy logo-image" src="./assets/images/logo.png"/>
                 <div className="social-links">
                     <a className="social-item" href="https://www.youtube.com/channel/UCIsge5kzES4PcpRlsTiTvIA" target="_blank"><i className="fab fa-youtube"></i></a>
                     <a className="social-item" href="https://www.twitter.com/thebadboyznft" target="_blank"><i className="fab fa-twitter"></i></a>
@@ -279,12 +292,15 @@ function Home() {
         <div className="badboy">  
             <div className="mobile-youtube-block">
                 <div className="youtube-container">
-                    <iframe className="width-100 landing-video" frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/Robs__2yu9M"> 
+                    {/* <video className="landing-video" controls> */}
+                        {/* <source src="./assets/images/trailer.webm" type="video/webm"></source> */}
+                    {/* </video> */}
+                    <iframe className="width-100 landing-video" frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/oqZErpzJMJM"> 
                     </iframe>
                 </div>
             </div>  
-            <img className="width-100 badboyz" src="./assets/images/badboyz.jpg"/>
-            <img className="width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.png"/>  
+            <img className="lazy width-100 badboyz" src="./assets/images/badboyz.jpg"/>
+            <img className="lazy width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.png"/>  
             {blockchain.account == null && blockchain.account == undefined ? 
                 <button className="connect-button comic-font btn btn-white no-display"
                     onClick={(e) => {
@@ -318,52 +334,52 @@ function Home() {
             </div> 
         </div>
         <div className="our-story">
-            <img className="width-100 our-story-back" src="./assets/images/our_story.png"/>
-            <img className="width-100 our-story-back-mobile" src="./assets/images/mobile/our_story_background.png"/>
+            <img className="lazy width-100 our-story-back" src="./assets/images/our_story.png"/>
+            <img className="lazy width-100 our-story-back-mobile" src="./assets/images/mobile/our_story_background.png"/>
             <div className="story-block row">
                 <div className="left-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
+                    <img className="lazy story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
                 </div>
                 <div className="medium-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
+                    <img className="lazy story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
                 </div>
                 <div className="right-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
+                    <img className="lazy story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
                 </div>
                 <div className="left-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="story-image story-4" ref={storyObj4} src="./assets/images/story4.png"/>
+                    <img className="lazy story-image story-4" ref={storyObj4} src="./assets/images/story4.png"/>
                 </div>
                 <div className="medium-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
+                    <img className="lazy story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
                 </div>
                 <div className="right-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
+                    <img className="lazy story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
                 </div>
             </div>
             {/* <div className="story-block-mobile">
                 <div className="left-block">
-                    <img className="story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
-                    <img className="story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
-                    <img className="story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
+                    <img className="lazy story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
+                    <img className="lazy story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
+                    <img className="lazy story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
                 </div>
                 <div className="right-block">
-                    <img className="story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
-                    <img className="story-image story-4" ref={storyObj3} src="./assets/images/story4.png"/>
-                    <img className="story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
+                    <img className="lazy story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
+                    <img className="lazy story-image story-4" ref={storyObj3} src="./assets/images/story4.png"/>
+                    <img className="lazy story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
                 </div>
             </div> */}
         </div>
-        <div className="road-map">
-            <img className="width-100 roadmap-image" src="./assets/images/WEB5.badboyz-Backlayer.png"/>
-            <img className="width-100 roadmap-image-mobile" src="./assets/images/mobile/roadmap-bottom-layer.png"/>
-            <img className="width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
-            <img className="width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap_top_layer.png"/>
+        <div className="road-map " ref={roadmapObj}>
+            <img className="lazy width-100 roadmap-image" src="./assets/images/WEB5.badboyz-Backlayer.png"/>
+            <img className="lazy width-100 roadmap-image-mobile" src="./assets/images/mobile/roadmap-bottom-layer.png"/>
+            <img className="lazy width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
+            <img className="lazy width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap_top_layer.png"/>
             <div className="text-center">
-                <img className="fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
-                <img className="wham" ref={whamObj} src="./assets/images/wham.png"/>
-                <img className="bang" ref={bangObj}src="./assets/images/bang.png"/>
-                <img className="pow" ref={powObj} src="./assets/images/pow.png"/>
-                <img className="kaboom" ref={kaboomObj} src="./assets/images/kaboom.png"/>
+                <img className="lazy fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
+                <img className="lazy wham" ref={whamObj} src="./assets/images/wham.png"/>
+                <img className="lazy bang" ref={bangObj}src="./assets/images/bang.png"/>
+                <img className="lazy pow" ref={powObj} src="./assets/images/pow.png"/>
+                <img className="lazy kaboom" ref={kaboomObj} src="./assets/images/kaboom.png"/>
             </div>
             <div className="roadmap-text-section">
                 <div className="percent25-text">
@@ -411,30 +427,30 @@ function Home() {
         </div>
         <div className="origin-story">
             <div className="origin-title text-center">
-                <img className="origin-story-title" ref={originObj} src="./assets/images/origin_story_title.png"/>
+                <img className="lazy origin-story-title" ref={originObj} src="./assets/images/origin_story_title.png"/>
             </div>
             <div className="comic-images-section">
                 <div className="comic-item">
                     <a href="./assets/images/SpiderBoy.png" data-fancybox>
-                        <img className="spider-boy comic-item-image" src="./assets/images/SpiderBoy.png" />
+                        <img className="lazy spider-boy comic-item-image" src="./assets/images/SpiderBoy.png" />
                     </a>
                 </div>
                 <div className="comic-item">
                     <a href="./assets/images/BatBoy.png" data-fancybox>
-                        <img className="bat-boy comic-item-image" src="./assets/images/BatBoy.png" /> 
+                        <img className="lazy bat-boy comic-item-image" src="./assets/images/BatBoy.png" /> 
                     </a>
                     
                 </div>
                 <div className="comic-item">
                     <a href="./assets/images/ComingSoon.png" data-fancybox>
-                        <img className="coming-soon comic-item-image" src="./assets/images/ComingSoon.png" />
+                        <img className="lazy coming-soon comic-item-image" src="./assets/images/ComingSoon.png" />
                     </a>
                 </div>
             </div>
         </div>
         <div className="join-us">
-            <img className="width-100 join-us-img" src="./assets/images/join_discord.jpg"/>
-            <img className="width-100 join-us-img-mobile" src="./assets/images/join_us.jpg"/>
+            <img className="lazy width-100 join-us-img" src="./assets/images/join_discord.jpg"/>
+            <img className="lazy width-100 join-us-img-mobile" src="./assets/images/join_us.jpg"/>
             <div className="join-us-text comic-font text-center">
                 <div className="join-us-text-block">
                     Get together with likeminded Badboyz and shower other projects with warm, compassionate love!<br/>
@@ -446,52 +462,52 @@ function Home() {
             </div>
         </div>
         <div className="our-team">
-            <img className="width-100 our-team-back" src="./assets/images/our_team.png"/>
-            <img className="width-100 our-team-back-mobile" src="./assets/images/mobile/our_team.png"/>
+            <img className="lazy width-100 our-team-back" src="./assets/images/our_team.png"/>
+            <img className="lazy width-100 our-team-back-mobile" src="./assets/images/mobile/our_team.png"/>
             <div className="row text-center team-block">
                 <div className="col-md-6 col-sm-6 team-item">
-                    <img className="member co-founder1" src="./assets/images/team1.png"/>
+                    <img className="lazy member co-founder1" src="./assets/images/team1.png"/>
                     <div className="team-caption co-founder1">
                         <div>CO-FOUNDER</div>
                         <div>NAME</div>
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-6 team-item">
-                    <img className="member co-founder2" src="./assets/images/team2.png"/>
+                    <img className="lazy member co-founder2" src="./assets/images/team2.png"/>
                     <div className="team-caption co-founder2">
                         <div>CO-FOUNDER</div>
                         <div>NAME</div>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-12">
-                    <img className="member-second-row member center-member" src="./assets/images/team3.png"/>
+                    <img className="lazy member-second-row member center-member" src="./assets/images/team3.png"/>
                     <div className="team-caption">
                         <div>DEVELOPER</div>
                         <div>NAME</div>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-6 team-item">
-                    <img className="member-second-row member" src="./assets/images/team4.png"/>
+                    <img className="lazy member-second-row member" src="./assets/images/team4.png"/>
                     <div className="team-caption">
                         <div>MARKETER</div>
                         <div>NAME</div>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-6 team-item">
-                    <img className="member-second-row member" src="./assets/images/team5.png"/>
+                    <img className="lazy member-second-row member" src="./assets/images/team5.png"/>
                     <div className="team-caption">
                         <div>ARTIST</div>
                         <div>NAME</div>
                     </div>
                 </div>
             </div>
-            <img className="width-100 footer-img" src="./assets/images/footer.jpg"/>
+            <img className="lazy width-100 footer-img" src="./assets/images/footer.jpg"/>
             <div className="footer-logo-section">
                     <div>
                         <a className="social-text" href="https://discord.gg/badboyz" target="_blank">Discord</a>
                     </div>
                     <div>
-                        <img className="logo-image footer-logo-image" src="./assets/images/logo.png"/>
+                        <img className="lazy logo-image footer-logo-image" src="./assets/images/logo.png"/>
                     </div>
                     <div>
                         <a className="social-text mx-2" href="https://www.instagram.com/thebadboyznft" target="_blank">Instagram</a>
@@ -501,8 +517,8 @@ function Home() {
                 </div>
         </div>
         <div className="faq-section">
-            <img className="width-100 footer-back" src="./assets/images/faq.jpg"/>
-            <img className="width-100 footer-back-mobile" src="./assets/images/mobile/faq.jpg"/>
+            <img className="lazy width-100 footer-back" src="./assets/images/faq.jpg"/>
+            <img className="lazy width-100 footer-back-mobile" src="./assets/images/mobile/faq.jpg"/>
             <section className="rubik-font accordion-section" id="accordionExample">
                 <div className="row section-qa">
                     <div className="col-md-6 col-sm-12">
@@ -589,7 +605,7 @@ function Home() {
             
         </div>
         {/* <div className="footer-section">
-            <img className="width-100 footer-img" src="./assets/images/footer.jpg"/>
+            <img className="lazy width-100 footer-img" src="./assets/images/footer.jpg"/>
         </div> */}
     </div>
   );
