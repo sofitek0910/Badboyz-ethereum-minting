@@ -271,7 +271,7 @@ function Home() {
             <div className="layer"></div>
             <div className="inner">
 				<figure>
-                    <video className="width-100" src="./assets/images/trailer.webm" type="video/webm" muted autoPlay loop>
+                    <video className="width-100" src="./assets/images/trailer.webm" type="video/webm" controls>
                         {/* <source src="./assets/images/trailer.webm" type="video/webm"></source> */}
                     </video>
 				</figure> 
