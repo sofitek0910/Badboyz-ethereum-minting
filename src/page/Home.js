@@ -167,7 +167,7 @@ function Home() {
     var storyObj5Dimension = storyObj5.current.getBoundingClientRect();
     var storyObj6Dimension = storyObj6.current.getBoundingClientRect();
 
-    console.log("scroll", window.scrollY)
+    console.log("scroll", $(".landing-video").innerHeight(), $(".landing-video").innerWidth())
     if (window.scrollY>10){
         navObj.current.style.setProperty("animation-name", "fadeOut");
         navObj.current.style.setProperty("animation-duration", "1.5s");
@@ -266,17 +266,16 @@ function Home() {
 
   return (
     <div>
-        <div className="preloader">
+        {/* <div className="preloader">
             <div className="layer"></div>
             <div className="inner">
 				<figure>
                     <video className="width-100" src="./assets/images/trailer.webm" type="video/webm" controls>
-                        {/* <source src="./assets/images/trailer.webm" type="video/webm"></source> */}
                     </video>
 				</figure> 
                 <span>Loading graphics..<br/> Please have patience</span>
 			</div>
-        </div>
+        </div> */}
         <nav className="navbar" ref={navObj}>
             <div className="container">
                 <img className="lazy logo-image" src="./assets/images/logo.png"/>
@@ -291,9 +290,9 @@ function Home() {
         <div className="badboy">  
             <div className="mobile-youtube-block">
                 <div className="youtube-container">
-                    {/* <video className="landing-video" controls> */}
-                        {/* <source src="./assets/images/trailer.webm" type="video/webm"></source> */}
-                    {/* </video> */}
+                    {/* <video className="landing-video" controls>
+                        <source src="./assets/images/trailer.webm" type="video/webm"></source>
+                    </video> */}
                     <iframe className="width-100 landing-video" frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/oqZErpzJMJM"> 
                     </iframe>
                 </div>
@@ -334,7 +333,7 @@ function Home() {
         </div>
         <div className="our-story">
             <img className="lazy width-100 our-story-back" src="./assets/images/our_story.jpg"/>
-            <img className="lazy width-100 our-story-back-mobile" src="./assets/images/mobile/our_story_background.png"/>
+            <img className="lazy width-100 our-story-back-mobile" src="./assets/images/mobile/our_story_background.jpg"/>
             <div className="story-block row">
                 <div className="left-block col-md-4 story-item col-sm-6 px-0">
                     <img className="lazy story-image story-1" ref={storyObj1} src="./assets/images/story1.jpg"/>
@@ -355,24 +354,12 @@ function Home() {
                     <img className="lazy story-image story-6" ref={storyObj6} src="./assets/images/story6.jpg"/>
                 </div>
             </div>
-            {/* <div className="story-block-mobile">
-                <div className="left-block">
-                    <img className="lazy story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
-                    <img className="lazy story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
-                    <img className="lazy story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
-                </div>
-                <div className="right-block">
-                    <img className="lazy story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
-                    <img className="lazy story-image story-4" ref={storyObj3} src="./assets/images/story4.png"/>
-                    <img className="lazy story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
-                </div>
-            </div> */}
         </div>
         <div className="road-map " ref={roadmapObj}>
             <img className="lazy width-100 roadmap-image" src="./assets/images/WEB5.jpg"/>
             <img className="lazy width-100 roadmap-image-mobile" src="./assets/images/mobile/roadmap-bottom-layer.jpg"/>
             <img className="lazy width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
-            <img className="lazy width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap_top_layer.jpg"/>
+            <img className="lazy width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap_top_layer.png"/>
             <div className="text-center">
                 <img className="lazy fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
                 <img className="lazy wham" ref={whamObj} src="./assets/images/wham.png"/>
