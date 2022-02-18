@@ -51,7 +51,6 @@ function Home() {
     setClaimingNft(true);
 
     if (!data.presaleStatus && !data.loading) {
-        console.log("public============>")
         blockchain.smartContract.methods
         .mintBadBoyz(mintAmount)
         .send({
@@ -300,7 +299,7 @@ function Home() {
                 </div>
             </div>  
             <img className="lazy width-100 badboyz" src="./assets/images/badboyz.jpg"/>
-            <img className="lazy width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.png"/>  
+            <img className="lazy width-100 badboyz-mobile" src="./assets/images/mobile/trail_logo.jpg"/>  
             {blockchain.account == null && blockchain.account == undefined ? 
                 <button className="connect-button comic-font btn btn-white no-display"
                     onClick={(e) => {
@@ -334,26 +333,26 @@ function Home() {
             </div> 
         </div>
         <div className="our-story">
-            <img className="lazy width-100 our-story-back" src="./assets/images/our_story.png"/>
+            <img className="lazy width-100 our-story-back" src="./assets/images/our_story.jpg"/>
             <img className="lazy width-100 our-story-back-mobile" src="./assets/images/mobile/our_story_background.png"/>
             <div className="story-block row">
                 <div className="left-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="lazy story-image story-1" ref={storyObj1} src="./assets/images/story1.png"/>
+                    <img className="lazy story-image story-1" ref={storyObj1} src="./assets/images/story1.jpg"/>
                 </div>
                 <div className="medium-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="lazy story-image story-2" ref={storyObj2} src="./assets/images/story2.png"/>
+                    <img className="lazy story-image story-2" ref={storyObj2} src="./assets/images/story2.jpg"/>
                 </div>
                 <div className="right-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="lazy story-image story-3" ref={storyObj3} src="./assets/images/story3.png"/>
+                    <img className="lazy story-image story-3" ref={storyObj3} src="./assets/images/story3.jpg"/>
                 </div>
                 <div className="left-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="lazy story-image story-4" ref={storyObj4} src="./assets/images/story4.png"/>
+                    <img className="lazy story-image story-4" ref={storyObj4} src="./assets/images/story4.jpg"/>
                 </div>
                 <div className="medium-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="lazy story-image story-5" ref={storyObj5} src="./assets/images/story5.png"/>
+                    <img className="lazy story-image story-5" ref={storyObj5} src="./assets/images/story5.jpg"/>
                 </div>
                 <div className="right-block col-md-4 story-item col-sm-6 px-0">
-                    <img className="lazy story-image story-6" ref={storyObj6} src="./assets/images/story6.png"/>
+                    <img className="lazy story-image story-6" ref={storyObj6} src="./assets/images/story6.jpg"/>
                 </div>
             </div>
             {/* <div className="story-block-mobile">
@@ -370,10 +369,10 @@ function Home() {
             </div> */}
         </div>
         <div className="road-map " ref={roadmapObj}>
-            <img className="lazy width-100 roadmap-image" src="./assets/images/WEB5.badboyz-Backlayer.png"/>
-            <img className="lazy width-100 roadmap-image-mobile" src="./assets/images/mobile/roadmap-bottom-layer.png"/>
+            <img className="lazy width-100 roadmap-image" src="./assets/images/WEB5.jpg"/>
+            <img className="lazy width-100 roadmap-image-mobile" src="./assets/images/mobile/roadmap-bottom-layer.jpg"/>
             <img className="lazy width-100 roadmap-front-image" src="./assets/images/roadmap_front.png"/>
-            <img className="lazy width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap_top_layer.png"/>
+            <img className="lazy width-100 roadmap-front-image-mobile" src="./assets/images/mobile/roadmap_top_layer.jpg"/>
             <div className="text-center">
                 <img className="lazy fly fixed" ref={flyObj} src="./assets/images/fly.png"/>
                 <img className="lazy wham" ref={whamObj} src="./assets/images/wham.png"/>
@@ -431,19 +430,18 @@ function Home() {
             </div>
             <div className="comic-images-section">
                 <div className="comic-item">
-                    <a href="./assets/images/SpiderBoy.png" data-fancybox>
-                        <img className="lazy spider-boy comic-item-image" src="./assets/images/SpiderBoy.png" />
+                    <a href="./assets/images/SpiderBoy.jpg" data-fancybox>
+                        <img className="lazy spider-boy comic-item-image" src="./assets/images/SpiderBoy.jpg" />
                     </a>
                 </div>
                 <div className="comic-item">
-                    <a href="./assets/images/BatBoy.png" data-fancybox>
-                        <img className="lazy bat-boy comic-item-image" src="./assets/images/BatBoy.png" /> 
+                    <a href="./assets/images/BatBoy.jpg" data-fancybox>
+                        <img className="lazy bat-boy comic-item-image" src="./assets/images/BatBoy.jpg" /> 
                     </a>
-                    
                 </div>
                 <div className="comic-item">
-                    <a href="./assets/images/ComingSoon.png" data-fancybox>
-                        <img className="lazy coming-soon comic-item-image" src="./assets/images/ComingSoon.png" />
+                    <a href="./assets/images/ComingSoon.jpg" data-fancybox>
+                        <img className="lazy coming-soon comic-item-image" src="./assets/images/ComingSoon.jpg" />
                     </a>
                 </div>
             </div>
@@ -462,8 +460,8 @@ function Home() {
             </div>
         </div>
         <div className="our-team">
-            <img className="lazy width-100 our-team-back" src="./assets/images/our_team.png"/>
-            <img className="lazy width-100 our-team-back-mobile" src="./assets/images/mobile/our_team.png"/>
+            <img className="lazy width-100 our-team-back" src="./assets/images/our_team.jpg"/>
+            <img className="lazy width-100 our-team-back-mobile" src="./assets/images/mobile/our_team.jpg"/>
             <div className="row text-center team-block">
                 <div className="col-md-6 col-sm-6 team-item">
                     <img className="lazy member co-founder1" src="./assets/images/team1.png"/>
