@@ -145,15 +145,6 @@ function Test() {
 
   return (
     <div>
-        <div className="preloader">
-            <div className="layer"></div>
-            <div className="inner">
-				<figure>
-					<img src="./assets/images/preloader.gif"/>
-				</figure> 
-                <span>Loading high quality graphics, Please wait...</span>
-			</div>
-        </div>
         <nav className="navbar">
             <div className="container">
                 <img className="logo-image" src="./assets/images/logo.png"/>
