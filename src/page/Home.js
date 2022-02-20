@@ -4,7 +4,6 @@ import { connect } from "../redux/blockchain/blockchainActions";
 import { fetchData } from "../redux/data/dataActions";
 import swal from "sweetalert";
 import $ from "jquery";
-// import "slick-slider";
 
 function Home() {
   const dispatch = useDispatch();
@@ -73,7 +72,6 @@ function Home() {
           dispatch(fetchData(blockchain.account));
         });
     } else {
-        console.log("presale===========>>>>>>>>>>");
         blockchain.smartContract.methods
         .presaleBadBoyz(mintAmount)
         .send({
@@ -590,7 +588,7 @@ function Home() {
             
         </div>
         {/* <div className="footer-section">
-            <img className="lazy width-100 footer-img" src="./assets/images/footer.jpg"/>
+            <img className="width-100 footer-img" src="./assets/images/footer.jpg"/>
         </div> */}
     </div>
   );
