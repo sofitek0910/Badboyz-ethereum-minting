@@ -159,11 +159,6 @@ function Home() {
     var originObjDimension = originObj.current.getBoundingClientRect();
     var storyObj1Dimension = storyObj1.current.getBoundingClientRect();
     var roadmapObjDimension = roadmapObj.current.getBoundingClientRect();
-    var storyObj2Dimension = storyObj2.current.getBoundingClientRect();
-    var storyObj3Dimension = storyObj3.current.getBoundingClientRect();
-    var storyObj4Dimension = storyObj4.current.getBoundingClientRect();
-    var storyObj5Dimension = storyObj5.current.getBoundingClientRect();
-    var storyObj6Dimension = storyObj6.current.getBoundingClientRect();
 
     console.log("scroll", $(".landing-video").innerHeight(), $(".landing-video").innerWidth())
     if (window.scrollY>10){
