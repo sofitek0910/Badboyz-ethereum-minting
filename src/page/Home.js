@@ -585,11 +585,8 @@ function Home() {
                 
             </section>
 
-            
         </div>
-        {/* <div className="footer-section">
-            <img className="width-100 footer-img" src="./assets/images/footer.jpg"/>
-        </div> */}
+     
     </div>
   );
 }
