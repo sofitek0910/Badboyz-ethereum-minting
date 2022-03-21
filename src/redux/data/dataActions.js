@@ -34,10 +34,16 @@ export const fetchData = () => {
         .blockchain.smartContract.methods.currentPresaleStatus()
         .call();
 console.log("presale------=====>", presaleStatus);
+      let saleStatus = await store
+        .getState()
+        .blockchain.smartContract.methods.currentSaleStatus()
+        .call();
+      console.log("sale------=====>", saleStatus);
       dispatch(
         fetchDataSuccess({
           totalSupply,
           presaleStatus,
+          saleStatus
         })
       );
     } catch (err) {

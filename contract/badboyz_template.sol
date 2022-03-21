@@ -74,10 +74,12 @@
     
       function toggleSaleState() external onlyOwner {
         saleIsActive = !saleIsActive;
+        presaleIsActive = false;
       }
     
       function togglePresaleState() external onlyOwner {
         presaleIsActive = !presaleIsActive;
+        saleIsActive = false;
       }
 
       function currentPresaleStatus() view public returns (bool) {

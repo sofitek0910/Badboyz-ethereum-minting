@@ -13,6 +13,7 @@ function Test() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [walletAddress, setWallet] = useState("");
   const [claimingNft, setClaimingNft] = useState(false);
+  const [activeSale, setActiveSale] = useState(false);
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
@@ -38,6 +39,10 @@ function Test() {
     setToggleMenu(!toggleMenu)
   }
 
+  const comingSoon = () => {
+    swal("BadBoyz coming soon!", "", "info");
+  }
+  
   const claimNFTs = () => {
     let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
@@ -49,9 +54,14 @@ function Test() {
     console.log("presale status: ", data.presaleStatus);
     // swal(`Minting your ${CONFIG.NFT_NAME}...`, "", "info");
     setClaimingNft(true);
+    // console.log("errorMSG==>", errorMSG)
+    // if (data.errorMSG != '') {
+    //   swal(data.errorMSG, "", "error");
+    //   return;
+    // }
 
     if (!data.presaleStatus && !data.loading) {
-        console.log("public============>")
+        console.log("public============>", data.presaleStatus, data.saleStatus, activeSale)
         blockchain.smartContract.methods
         .mintBadBoyz(mintAmount)
         .send({
@@ -120,6 +130,10 @@ function Test() {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
         dispatch(fetchData(blockchain.account));  
     }
+    if (blockchain.errorMsg !== "") {
+      console.log("blockchainerr==>", blockchain.errorMsg)
+      swal(blockchain.errorMsg, "", "info");
+    }
   };
 
   const getConfig = async () => {
@@ -142,6 +156,13 @@ function Test() {
   useEffect(() => {
     getData();
   }, [blockchain.account]);
+
+  useEffect(() => {
+    if (data.presaleStatus || data.saleStatus) {
+      setActiveSale(true);
+    }
+    console.log("saleactive[][][][][]===>", data.presaleStatus, data.saleStatus, activeSale)
+  }, [data]);
 
   return (
     <div>
@@ -177,10 +198,11 @@ function Test() {
                 }
                 </span>
             }  
-            <div className="col-md-3 col-sm-12 text-center">
+            {activeSale?
+              <div className="col-md-3 col-sm-12 text-center">
                 <button 
                     className="mint-btn comic-font btn btn btn-white"
-                    disabled={claimingNft ? 1 : 0}
+                    disabled={claimingNft? 1 : 0}
                     onClick={(e) => {
                         e.preventDefault();
                         claimNFTs();
@@ -189,7 +211,20 @@ function Test() {
                 >
                 {claimingNft ? "MINTING" : "MINT"}
                 </button>
-            </div> 
+              </div>:
+              <div className="col-md-3 col-sm-12 text-center">
+                <button 
+                  className="mint-btn comic-font"
+                  disabled
+                  onClick={(e) => {
+                      e.preventDefault();
+                  }}
+                >
+                  MINT
+                </button>
+              </div>
+            }
+             
         </div>
     </div>
   );

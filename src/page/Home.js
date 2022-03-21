@@ -295,9 +295,9 @@ function Home() {
             {blockchain.account == null && blockchain.account == undefined ? 
                 <button className="connect-button comic-font btn btn-white no-display"
                     onClick={(e) => {
-                    e.preventDefault();
-                    dispatch(connect());
-                    getData();
+                        e.preventDefault();
+                        dispatch(connect());
+                        getData();
                     }
                 }
                 >

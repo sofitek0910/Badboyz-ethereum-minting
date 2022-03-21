@@ -1,6 +1,7 @@
 // constants
 import Web3EthContract from "web3-eth-contract";
 import Web3 from "web3";
+import swal from "sweetalert";
 // log
 import { fetchData } from "../data/dataActions";
 
@@ -51,6 +52,7 @@ export const connect = () => {
     const { ethereum } = window;
     const metamaskIsInstalled = ethereum && ethereum.isMetaMask;
     if (metamaskIsInstalled) {
+      console.log("metamask is installed") 
       Web3EthContract.setProvider(ethereum);
       let web3 = new Web3(ethereum);
       try {
@@ -81,13 +83,15 @@ export const connect = () => {
           });
           // Add listeners end
         } else {
-          dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
+          swal(`Change network to ${CONFIG.NETWORK.NAME}.`, "", "info");
+          // dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
         }
       } catch (err) {
-        dispatch(connectFailed("Something went wrong."));
+        swal("Something went wrong.", "", "error");
       }
     } else {
-      dispatch(connectFailed("Install Metamask."));
+      swal("Please install Metamask first.", "", "info");
+      // dispatch(connectFailed("Install Metamask."));
     }
   };
 };
