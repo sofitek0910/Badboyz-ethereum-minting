@@ -54,11 +54,6 @@ function Test() {
     console.log("presale status: ", data.presaleStatus);
     // swal(`Minting your ${CONFIG.NFT_NAME}...`, "", "info");
     setClaimingNft(true);
-    // console.log("errorMSG==>", errorMSG)
-    // if (data.errorMSG != '') {
-    //   swal(data.errorMSG, "", "error");
-    //   return;
-    // }
 
     if (!data.presaleStatus && !data.loading) {
         console.log("public============>", data.presaleStatus, data.saleStatus, activeSale)
