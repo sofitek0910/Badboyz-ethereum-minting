@@ -126,7 +126,6 @@ function Test() {
         dispatch(fetchData(blockchain.account));  
     }
     if (blockchain.errorMsg !== "") {
-      console.log("blockchainerr==>", blockchain.errorMsg)
       swal(blockchain.errorMsg, "", "info");
     }
   };
@@ -156,7 +155,6 @@ function Test() {
     if (data.presaleStatus || data.saleStatus) {
       setActiveSale(true);
     }
-    console.log("saleactive[][][][][]===>", data.presaleStatus, data.saleStatus, activeSale)
   }, [data]);
 
   return (
