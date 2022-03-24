@@ -79,7 +79,7 @@ function Test() {
           dispatch(fetchData(blockchain.account));
         });
     } else {
-        console.log("presale===========>>>>>>>>>>");
+        console.log("presale>>>>>>>>>>");
         blockchain.smartContract.methods
         .presaleBadBoyz(mintAmount)
         .send({
@@ -101,7 +101,7 @@ function Test() {
           setClaimingNft(false);
           dispatch(fetchData(blockchain.account));
         })
-        .catch(revertReason => console.log("reverreason===>",{revertReason}));
+        .catch(revertReason => console.log("revertreason===>",{revertReason}));
     }
   };
 
