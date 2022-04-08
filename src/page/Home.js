@@ -286,7 +286,7 @@ function Home() {
                     {/* <video className="landing-video" controls>
                         <source src="./assets/images/trailer.webm" type="video/webm"></source>
                     </video> */}
-                    <iframe className="width-100 landing-video" frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/oqZErpzJMJM"> 
+                    <iframe className="width-100 landing-video" frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/4ZF3WokJCXw"> 
                     </iframe>
                 </div>
             </div>  
