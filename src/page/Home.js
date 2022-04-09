@@ -450,7 +450,7 @@ function Home() {
                             <div>CREATIVE DIRECTOR</div>
                             <div>DOCTER CREAM</div>
                             <div className="social-block">
-                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="http://t.me/badboyzchat" target="_blank"><i class="fab fa-telegram"></i></a>
                                 <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
                             </div>
                         </div>
@@ -461,7 +461,7 @@ function Home() {
                             <div>MARKETING DIRECTOR</div>
                             <div>MISTER CRINCH</div>
                             <div className="social-block">
-                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="http://t.me/badboyzchat" target="_blank"><i class="fab fa-telegram"></i></a>
                                 <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
                             </div>
                         </div>
@@ -472,7 +472,7 @@ function Home() {
                             <div>MARKETING DIRECTOR</div>
                             <div>MISTER MARSHMALLOW</div>
                             <div className="social-block">
-                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="http://t.me/badboyzchat" target="_blank"><i class="fab fa-telegram"></i></a>
                                 <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
                             </div>
                         </div>
@@ -490,7 +490,7 @@ function Home() {
                             <div>ARTIST</div>
                             <div>MISTER MARSHMALLOW</div>
                             <div className="social-block">
-                                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="" target="_blank" className="instagram-icon"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>

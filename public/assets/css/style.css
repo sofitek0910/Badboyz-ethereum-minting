@@ -106,7 +106,7 @@ body {
 .gallery-item-3 {
     width: 25vw;
     height: 25vw;
-    box-shadow: 0 0 10px rgb(255 255 255 / 40%), 0 0 20px rgb(255 255 255 / 25%), 0 0 110px rgb(255 255 255 / 5%), 0 0 100px rgb(255 255 255 / 10%);
+    /* box-shadow: 0 0 10px rgb(255 255 255 / 40%), 0 0 20px rgb(255 255 255 / 25%), 0 0 110px rgb(255 255 255 / 5%), 0 0 100px rgb(255 255 255 / 10%); */
 }
 
 .gallery-item-2 {
@@ -133,6 +133,17 @@ body {
 
 .gallery-item-5 {
     left: 80%;
+}
+
+.fa-instagram {
+    color: #fff!important;
+}
+
+.instagram-icon {
+    padding: 7px 7px 5px 7px;
+    border-radius: 50%;
+    background-color: #000;
+    font-size: 16px;
 }
 
 .gallery-container {
