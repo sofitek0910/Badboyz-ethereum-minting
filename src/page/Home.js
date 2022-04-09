@@ -444,12 +444,78 @@ function Home() {
             <img className="lazy width-100 our-team-back-mobile" src="./assets/images/mobile/our_team.jpg"/>
             <div class="gallery team-block">
                 <div class="gallery-container">
-                    <img class="gallery-item gallery-item-1" src="./assets/images/team1.png" data-index="1"/>
+                    <div className="gallery-item gallery-item-1" data-index="1">
+                        <img className="width-100" src="./assets/images/team1.png" data-index="1"/>
+                        <div className="team-caption">
+                            <div>CREATIVE DIRECTOR</div>
+                            <div>DOCTER CREAM</div>
+                            <div className="social-block">
+                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="gallery-item gallery-item-2" data-index="2">
+                        <img className="width-100" src="./assets/images/team2.png" data-index="2"/>
+                        <div className="team-caption">
+                            <div>MARKETING DIRECTOR</div>
+                            <div>MISTER CRINCH</div>
+                            <div className="social-block">
+                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="gallery-item gallery-item-3" data-index="3">
+                        <img className="width-100" src="./assets/images/team3.png" data-index="3"/>
+                        <div className="team-caption">
+                            <div>MARKETING DIRECTOR</div>
+                            <div>MISTER MARSHMALLOW</div>
+                            <div className="social-block">
+                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="gallery-item gallery-item-4" data-index="4">
+                        <img className="width-100" src="./assets/images/team4.png" data-index="4"/>
+                        <div className="team-caption">
+                            <div>DEVELOPER</div>
+                            <div>MISTER HARVIN</div>
+                            <div className="social-block">
+                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="gallery-item gallery-item-5" data-index="5">
+                        <img className="width-100" src="./assets/images/team5.png" data-index="5"/>
+                        <div className="team-caption">
+                            <div>ARTIST</div>
+                            <div>MISTER MARSHMALLOW</div>
+                            <div className="social-block">
+                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="gallery-item gallery-item-6" data-index="6">
+                        <img className="width-100" src="./assets/images/team6.png" data-index="6"/>
+                        <div className="team-caption">
+                            <div>ANIMATOR</div>
+                            <div>MISTER ELLON</div>
+                            <div className="social-block">
+                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <img class="gallery-item gallery-item-1" src="./assets/images/team1.png" data-index="1"/>
                     <img class="gallery-item gallery-item-2" src="./assets/images/team2.png" data-index="2"/>
                     <img class="gallery-item gallery-item-3" src="./assets/images/team3.png" data-index="3"/>
                     <img class="gallery-item gallery-item-4" src="./assets/images/team4.png" data-index="4"/>
                     <img class="gallery-item gallery-item-5" src="./assets/images/team5.png" data-index="5"/>
-                    <img class="gallery-item gallery-item-6" src="./assets/images/team6.png" data-index="6"/>
+                    <img class="gallery-item gallery-item-6" src="./assets/images/team6.png" data-index="6"/> */}
                 </div>
                 <div class="gallery-controls"></div>
             </div>

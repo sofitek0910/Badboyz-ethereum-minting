@@ -70,12 +70,17 @@ body {
     border: 6px solid #000;
 }
 
+.gallery-controls-previous, .gallery-controls-next {
+    font-family: 'comic-light';
+    font-weight: bold;
+}
+
 .gallery-controls button {
     font-size: 20px;
 }
 
 .gallery-container {
-    height: 30vw;
+    height: 34vw;
 }
 
 .gallery-controls-add {
@@ -123,6 +128,10 @@ body {
 
 .gallery-container {
     max-width: none;
+}
+
+.social-block a {
+    color: #000;
 }
 
 /* PRELOADER */
@@ -628,8 +637,40 @@ body {
 }
 
 .team-caption {
+    margin-top: 1vw;
+    text-align: center;
     font-family: 'comic-caption';
+}
+
+.gallery-item-3 .team-caption {
     font-size: 1.7vw;
+    line-height: 0.8;
+}
+
+.gallery-item-2 .team-caption, .gallery-item-4 .team-caption {
+    font-size: 1.1vw;
+    line-height: 0.8;
+}
+
+.gallery-item-1 .team-caption, .gallery-item-5 .team-caption {
+    font-size: 0.85vw;
+    line-height: 0.8;
+}
+
+.gallery-item-3 .team-caption .social-block {
+    font-size: 2.1vw;
+}
+
+.gallery-item-2 .team-caption .social-block, .gallery-item-4 .team-caption .social-block{
+    font-size: 1.4vw;
+}
+
+.gallery-item-1 .team-caption .social-block, .gallery-item-5 .team-caption .social-block {
+    font-size: 1.05vw;
+}
+
+.social-block {
+    margin-top: 5px;
 }
 
 .team-block {
@@ -762,8 +803,48 @@ body {
     .join-us-img, .our-team-back, .footer-back {
         display: none;
     }
+    .team-caption {
+        margin-top: 3vw;
+    }
+    .gallery-item-3 .team-caption {
+        font-size: 5vw;
+        line-height: 0.8;
+    }
+    
+    .gallery-item-2 .team-caption, .gallery-item-4 .team-caption {
+        font-size: 3.4vw;
+        line-height: 0.8;
+    }
+    
+    .gallery-item-1 .team-caption, .gallery-item-5 .team-caption {
+        font-size: 2.5vw;
+        line-height: 0.8;
+    }
+    
+    .gallery-item-3 .team-caption .social-block {
+        font-size: 6vw;
+    }
+
+    .gallery-item-2 .team-caption .social-block, .gallery-item-4 .team-caption .social-block{
+        font-size: 4vw;
+        display: none;
+    }
+    
+    .gallery-item-1 .team-caption .social-block, .gallery-item-5 .team-caption .social-block {
+        font-size: 3vw;
+        display: none;
+    }
+
+    .gallery-controls button {
+        font-size: 24px;
+    }
+
+    .gallery-controls-previous::before {
+        top: 13px;
+    }
+
     .gallery-container {
-        height: 92vw;
+        height: 100vw;
     }
     .gallery-item-2, .gallery-item-4 {
         width: 48vw;
