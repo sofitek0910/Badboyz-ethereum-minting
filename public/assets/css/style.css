@@ -66,6 +66,10 @@ body {
     display: none;
 }
 
+.gallery-container {
+    max-width: 100vw;
+}
+
 .gallery-item {
     border: 6px solid #000;
 }
@@ -95,9 +99,14 @@ body {
     top: 56%;
 }
 
+.gallery-item {
+    left: 50%;
+}
+
 .gallery-item-3 {
     width: 25vw;
     height: 25vw;
+    box-shadow: 0 0 10px rgb(255 255 255 / 40%), 0 0 20px rgb(255 255 255 / 25%), 0 0 110px rgb(255 255 255 / 5%), 0 0 100px rgb(255 255 255 / 10%);
 }
 
 .gallery-item-2 {
@@ -271,6 +280,10 @@ body {
 /*  my new css */
 .width-100 {
     width: 100%;
+}
+
+.width-10 {
+    width: 10%;
 }
 
 .connect-button {

@@ -27,7 +27,7 @@ class Carousel {
 
   // Update the current order of the carouselArray and gallery
   setCurrentState(direction) {
-
+    $("gallery-item-6").hide();
     if (direction.className == 'gallery-controls-previous') {
       this.carouselArray.unshift(this.carouselArray.pop());
     } else {

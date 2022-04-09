@@ -482,10 +482,6 @@ function Home() {
                         <div className="team-caption">
                             <div>DEVELOPER</div>
                             <div>MISTER HARVIN</div>
-                            <div className="social-block">
-                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
-                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                            </div>
                         </div>
                     </div>
                     <div className="gallery-item gallery-item-5" data-index="5">
@@ -494,8 +490,7 @@ function Home() {
                             <div>ARTIST</div>
                             <div>MISTER MARSHMALLOW</div>
                             <div className="social-block">
-                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
-                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -504,10 +499,6 @@ function Home() {
                         <div className="team-caption">
                             <div>ANIMATOR</div>
                             <div>MISTER ELLON</div>
-                            <div className="social-block">
-                                <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
-                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                            </div>
                         </div>
                     </div>
                     {/* <img class="gallery-item gallery-item-1" src="./assets/images/team1.png" data-index="1"/>
