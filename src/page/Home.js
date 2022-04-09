@@ -443,15 +443,16 @@ function Home() {
             <img className="lazy width-100 our-team-back" src="./assets/images/our_team.jpg"/>
             <img className="lazy width-100 our-team-back-mobile" src="./assets/images/mobile/our_team.jpg"/>
             <div class="gallery team-block">
-    <div class="gallery-container">
-      <img class="gallery-item gallery-item-1" src="./assets/images/team1.png" data-index="1"/>
-      <img class="gallery-item gallery-item-2" src="./assets/images/team2.png" data-index="2"/>
-      <img class="gallery-item gallery-item-3" src="./assets/images/team3.png" data-index="3"/>
-      <img class="gallery-item gallery-item-4" src="./assets/images/team4.png" data-index="4"/>
-      <img class="gallery-item gallery-item-5" src="./assets/images/team5.png" data-index="5"/>
-    </div>
-    <div class="gallery-controls"></div>
-  </div>
+                <div class="gallery-container">
+                    <img class="gallery-item gallery-item-1" src="./assets/images/team1.png" data-index="1"/>
+                    <img class="gallery-item gallery-item-2" src="./assets/images/team2.png" data-index="2"/>
+                    <img class="gallery-item gallery-item-3" src="./assets/images/team3.png" data-index="3"/>
+                    <img class="gallery-item gallery-item-4" src="./assets/images/team4.png" data-index="4"/>
+                    <img class="gallery-item gallery-item-5" src="./assets/images/team5.png" data-index="5"/>
+                    <img class="gallery-item gallery-item-6" src="./assets/images/team6.png" data-index="6"/>
+                </div>
+                <div class="gallery-controls"></div>
+            </div>
             {/* <div className="row text-center team-block">
                 <div className="col-md-6 col-sm-6 team-item">
                     <img className="lazy member co-founder1" src="./assets/images/team1.png"/>

@@ -66,6 +66,10 @@ body {
     display: none;
 }
 
+.gallery-item {
+    border: 6px solid #000;
+}
+
 .gallery-controls button {
     font-size: 20px;
 }
