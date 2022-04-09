@@ -66,6 +66,61 @@ body {
     display: none;
 }
 
+.gallery-controls button {
+    font-size: 20px;
+}
+
+.gallery-container {
+    height: 30vw;
+}
+
+.gallery-controls-add {
+    display: none;
+}
+
+.gallery-controls-previous::before {
+    top: 10px;
+}
+
+.gallery-controls-next::before { 
+    top: 56%;
+}
+
+.gallery-item-3 {
+    width: 25vw;
+    height: 25vw;
+}
+
+.gallery-item-2 {
+    left: 33%;
+}
+
+.gallery-item-2, .gallery-item-4 {
+    width: 16vw;
+    height: 16vw;
+}
+
+.gallery-item-4 {
+    left: 67%;
+}
+
+.gallery-item-1 {
+    left: 20%;
+}
+
+.gallery-item-1, .gallery-item-5 {
+    width: 12vw;
+    height: 12vw;
+}
+
+.gallery-item-5 {
+    left: 80%;
+}
+
+.gallery-container {
+    max-width: none;
+}
+
 /* PRELOADER */
 .preloader {
     width: 100%;
@@ -702,6 +757,21 @@ body {
     .badboyz, .our-story-back, .roadmap-image, .roadmap-front-image,
     .join-us-img, .our-team-back, .footer-back {
         display: none;
+    }
+    .gallery-container {
+        height: 92vw;
+    }
+    .gallery-item-2, .gallery-item-4 {
+        width: 48vw;
+        height: 48vw;
+    }
+    .gallery-item-3 {
+        width: 70vw;
+        height: 70vw;
+    }
+    .gallery-item-1, .gallery-item-5 {
+        width: 35vw;
+        height: 35vw;
     }
     .badboyz-mobile, .our-story-back-mobile, .roadmap-image-mobile, .roadmap-front-image-mobile,
     .our-team-back-mobile, .join-us-img-mobile, .footer-back-mobile {
