@@ -154,6 +154,12 @@ body {
     color: #000;
 }
 
+.btn:disabled, fieldset:disabled .btn {
+    pointer-events: none;
+    opacity: .65;
+    color: #000!important;
+}
+
 /* PRELOADER */
 .preloader {
     width: 100%;
